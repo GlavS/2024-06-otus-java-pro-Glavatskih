@@ -1,7 +1,5 @@
 package homework;
 
-import java.util.Objects;
-
 public class Customer {
     private final long id;
     private String name;
@@ -45,7 +43,7 @@ public class Customer {
         if (o == null || getClass() != o.getClass()) return false;
 
         Customer customer = (Customer) o;
-        return Objects.equals(id, customer.id);
+        return id == customer.id;
     }
 
     @Override
