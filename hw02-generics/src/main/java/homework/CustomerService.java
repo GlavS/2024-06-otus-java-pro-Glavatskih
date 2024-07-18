@@ -11,55 +11,40 @@ public class CustomerService {
 
     public Map.Entry<Customer, String> getSmallest() {
         Map.Entry<Customer, String> smallestEntry = customerMap.firstEntry();
-        if (smallestEntry == null) {
-            return null;
-        } else {
-            return new Map.Entry<>() {
-                @Override
-                public Customer getKey() {
-                    Customer innerCustomer = smallestEntry.getKey();
-                    return new Customer(innerCustomer.getId(), innerCustomer.getName(), innerCustomer.getScores());
-                }
-
-                @Override
-                public String getValue() {
-                    return smallestEntry.getValue();
-                }
-
-                @Override
-                public String setValue(String value) {
-                    return "";
-                }
-            };
-        }
+        return getEntry(smallestEntry);
     }
+
 
     public Map.Entry<Customer, String> getNext(Customer customer) {
         Map.Entry<Customer, String> nextEntry = customerMap.higherEntry(customer);
-        if (nextEntry == null) {
-            return null;
-        } else {
-            return new Map.Entry<>() {
-                @Override
-                public Customer getKey() {
-                    Customer innerCustomer = nextEntry.getKey();
-                    return new Customer(innerCustomer.getId(), innerCustomer.getName(), innerCustomer.getScores());
-                }
-
-                @Override
-                public String getValue() {
-                    return nextEntry.getValue();
-                }
-
-                @Override
-                public String setValue(String value) {
-                    return "";
-                }
-            };
-        }
+        return getEntry(nextEntry);
     }
 
     public void add(Customer customer, String data) {
         customerMap.put(customer, data);
+    }
+
+    private Map.Entry<Customer, String> getEntry(Map.Entry<Customer, String> entry) {
+        if (entry == null) {
+            return null;
+        } else {
+            return new Map.Entry<>() {
+                @Override
+                public Customer getKey() {
+                    Customer innerCustomer = entry.getKey();
+                    return new Customer(innerCustomer.getId(), innerCustomer.getName(), innerCustomer.getScores());
+                }
+
+                @Override
+                public String getValue() {
+                    return entry.getValue();
+                }
+
+                @Override
+                public String setValue(String value) {
+                    return "";
+                }
+            };
+        }
     }
 }
