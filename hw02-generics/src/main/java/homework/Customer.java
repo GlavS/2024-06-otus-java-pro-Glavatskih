@@ -2,13 +2,11 @@ package homework;
 
 import java.util.Objects;
 
-@SuppressWarnings({"java:S1135"}) // при выполнении ДЗ эту аннотацию надо удалить
 public class Customer {
     private final long id;
     private String name;
     private long scores;
 
-    // todo: 1. в этом классе надо исправить ошибки
 
     public Customer(long id, String name, long scores) {
         this.id = id;
