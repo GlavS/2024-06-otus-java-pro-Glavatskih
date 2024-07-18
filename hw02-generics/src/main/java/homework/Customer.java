@@ -5,7 +5,6 @@ public class Customer {
     private String name;
     private long scores;
 
-
     public Customer(long id, String name, long scores) {
         this.id = id;
         this.name = name;

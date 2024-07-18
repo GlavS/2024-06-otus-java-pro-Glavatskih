@@ -14,7 +14,6 @@ public class CustomerService {
         return getEntry(smallestEntry);
     }
 
-
     public Map.Entry<Customer, String> getNext(Customer customer) {
         Map.Entry<Customer, String> nextEntry = customerMap.higherEntry(customer);
         return getEntry(nextEntry);

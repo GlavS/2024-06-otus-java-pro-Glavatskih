@@ -5,7 +5,6 @@ package ru.otus;
 
 import com.google.common.collect.Lists;
 import com.google.common.math.IntMath;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +22,6 @@ public class HelloOtus {
 
         int base = 12;
         int factorial = IntMath.factorial(base);
-        System.out.printf("\nFactorial of %d is %d\n\n", base, factorial);
+        System.out.printf("%nFactorial of %d is %d%n%n", base, factorial);
     }
 }
