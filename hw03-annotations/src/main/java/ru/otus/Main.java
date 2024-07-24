@@ -6,5 +6,6 @@ import ru.otus.testrunner.TestRunner;
 public class Main {
     public static void main(String[] args) {
         TestRunner.runTests(SampleTest.class);
+        // ./gradlew :hw03-annotations:run
     }
 }
