@@ -1,0 +1,6 @@
+group = "ru.otus"
+dependencies {
+
+}
+
+
