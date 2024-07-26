@@ -34,10 +34,6 @@ public class TestRunner {
                 invokeConfigMethod(afterMethod, testClassInstance);
             }
         }
-        logger.info("Tests complete: {}", testMethods.length);
-        logger.info("Tests successful: {}", successCounter);
-        if (successCounter < testMethods.length) {
-            logger.error("Tests failed: {}", testMethods.length - successCounter);
-        }
+        displayStats(testMethods.length, successCounter);
     }
 }

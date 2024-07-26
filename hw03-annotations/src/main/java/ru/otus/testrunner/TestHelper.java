@@ -61,4 +61,12 @@ public class TestHelper {
             e.printStackTrace(System.err);
         }
     }
+
+    public static void displayStats(int totalTests, int successTests) {
+        logger.info("Tests complete: {}", totalTests);
+        logger.info("Tests successful: {}", successTests);
+        if (successTests < totalTests) {
+            logger.error("Tests failed: {}", totalTests - successTests);
+        }
+    }
 }
