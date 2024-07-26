@@ -4,17 +4,18 @@ import ru.otus.annotations.After;
 import ru.otus.annotations.Before;
 import ru.otus.annotations.Test;
 
-@SuppressWarnings("java:S106")
+@SuppressWarnings({"java:S106", "java:S112", "java:S125"})
 public class SampleTest {
 
     @Before
     void setup() {
+        //throw new RuntimeException("Error in setup");
         System.out.println("Setup......");
     }
 
     @Before
-    void before() {
-        System.out.println("Second setup.....");
+    void secondSetup() {
+        System.out.println("Setup another ......");
     }
 
     @Test
@@ -39,6 +40,11 @@ public class SampleTest {
 
     @After
     void tearDown() {
-        System.out.println("Tear down......");
+        System.out.println("TearDown......");
+    }
+
+    @After
+    void secondTearDown() {
+        System.out.println("TearDown another ......" + System.lineSeparator());
     }
 }
