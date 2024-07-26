@@ -8,7 +8,7 @@ import java.util.Arrays;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@SuppressWarnings({"java:S106", "java:S3011"})
+@SuppressWarnings("java:S3011")
 public class TestHelper {
     private static final Logger logger = LoggerFactory.getLogger(TestHelper.class);
 
@@ -28,38 +28,23 @@ public class TestHelper {
             instance = constructor.newInstance();
         } catch (Exception e) {
             logger.error("Cannot instantiate test class");
-            throw new TestClassInstantiationException(e.getMessage());
+            throw new TestClassInstantiationException(e);
         }
         return instance;
     }
 
-    public static int invokeTestMethod(Method method, Object testClass) {
+    public static TestExitStatus invokeTestMethod(Method method, Object testClass) {
         method.setAccessible(true);
         try {
             method.invoke(testClass);
         } catch (InvocationTargetException e) {
-            logger.error(
-                    "Error in test method {}: {}",
-                    method.getName(),
-                    e.getCause().getMessage());
-            e.getCause().printStackTrace(System.err);
-            return 0;
+            logger.error(e.getCause().getMessage(), e.getCause());
+            return TestExitStatus.FAIL;
         } catch (IllegalAccessException e) {
-            e.printStackTrace(System.err);
-            return 0;
+            logger.error(e.getMessage(), e);
+            return TestExitStatus.FAIL;
         }
-        return 1;
-    }
-
-    public static void invokeConfigMethod(Method method, Object testClass) {
-        method.setAccessible(true);
-        try {
-            method.invoke(testClass);
-        } catch (InvocationTargetException e) {
-            e.getCause().printStackTrace(System.err);
-        } catch (IllegalAccessException e) {
-            e.printStackTrace(System.err);
-        }
+        return TestExitStatus.SUCCESS;
     }
 
     public static void displayStats(int totalTests, int successTests) {
@@ -68,5 +53,20 @@ public class TestHelper {
         if (successTests < totalTests) {
             logger.error("Tests failed: {}", totalTests - successTests);
         }
+    }
+
+    public static void runAfterMethods(Method[] afterMethods, Object testClass) {
+        for (Method afterMethod : afterMethods) {
+            invokeTestMethod(afterMethod, testClass);
+        }
+    }
+
+    public static TestExitStatus runBeforeMethods(Method[] beforeMethods, Object testClass) {
+        for (Method beforeMethod : beforeMethods) {
+            if (invokeTestMethod(beforeMethod, testClass) == TestExitStatus.FAIL) {
+                return TestExitStatus.FAIL;
+            }
+        }
+        return TestExitStatus.SUCCESS;
     }
 }
