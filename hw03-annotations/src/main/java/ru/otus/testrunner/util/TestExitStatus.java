@@ -1,4 +1,4 @@
-package ru.otus.testrunner;
+package ru.otus.testrunner.util;
 
 public enum TestExitStatus {
     SUCCESS,

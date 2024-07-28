@@ -1,4 +1,4 @@
-package ru.otus.testrunner;
+package ru.otus.testrunner.util;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;

@@ -1,6 +1,6 @@
 package ru.otus.testrunner;
 
-import static ru.otus.testrunner.TestHelper.*;
+import static ru.otus.testrunner.util.TestHelper.*;
 
 import java.lang.reflect.Method;
 import org.slf4j.Logger;
@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import ru.otus.annotations.After;
 import ru.otus.annotations.Before;
 import ru.otus.annotations.Test;
+import ru.otus.testrunner.util.TestExitStatus;
 
 public class TestRunner {
     private static final Logger logger = LoggerFactory.getLogger(TestRunner.class);

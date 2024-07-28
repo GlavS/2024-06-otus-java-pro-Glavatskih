@@ -9,7 +9,7 @@ public class SampleTest {
 
     @Before
     void setup() {
-        //throw new RuntimeException("Error in setup");
+        // throw new RuntimeException("Error in setup");
         System.out.println("Setup......");
     }
 
