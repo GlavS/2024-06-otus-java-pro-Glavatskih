@@ -10,9 +10,9 @@ import ru.otus.annotations.Before;
 import ru.otus.annotations.Test;
 
 public class TestRunner {
-    private TestRunner() {}
-
     private static final Logger logger = LoggerFactory.getLogger(TestRunner.class);
+
+    private TestRunner() {}
 
     public static void runTests(Class<?> testClass) {
         int successCounter = 0;
@@ -26,12 +26,11 @@ public class TestRunner {
 
         for (Method testMethod : testMethods) {
             Object testClassInstance = instantiateTestClass(testClass);
-            for (Method beforeMethod : beforeMethods) {
-                invokeConfigMethod(beforeMethod, testClassInstance);
-            }
-            successCounter += invokeTestMethod(testMethod, testClassInstance);
-            for (Method afterMethod : afterMethods) {
-                invokeConfigMethod(afterMethod, testClassInstance);
+            if (runBeforeMethods(beforeMethods, testClassInstance) == TestExitStatus.FAIL) {
+                runAfterMethods(afterMethods, testClassInstance);
+            } else {
+                if (invokeTestMethod(testMethod, testClassInstance) == TestExitStatus.SUCCESS) successCounter++;
+                runAfterMethods(afterMethods, testClassInstance);
             }
         }
         displayStats(testMethods.length, successCounter);

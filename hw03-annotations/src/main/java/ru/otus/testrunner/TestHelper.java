@@ -12,7 +12,9 @@ import org.slf4j.LoggerFactory;
 public class TestHelper {
     private static final Logger logger = LoggerFactory.getLogger(TestHelper.class);
 
-    private TestHelper() {}
+    private TestHelper() {
+        throw new UnsupportedOperationException("This is utility class, no instantiation");
+    }
 
     public static Method[] getTestMethods(Class<?> testClass, Class<? extends Annotation> annotation) {
         return Arrays.stream(testClass.getDeclaredMethods())
