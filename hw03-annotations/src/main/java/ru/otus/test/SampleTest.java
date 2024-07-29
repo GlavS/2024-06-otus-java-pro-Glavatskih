@@ -9,8 +9,8 @@ public class SampleTest {
 
     @Before
     void setup() {
-        //throw new RuntimeException("Error in setup");
-         System.out.println("Setup......");
+        // throw new RuntimeException("Error in setup");
+        System.out.println("Setup......");
     }
 
     @Before
