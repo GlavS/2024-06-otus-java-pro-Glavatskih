@@ -35,18 +35,10 @@ public class TestHelper {
         return instance;
     }
 
-    public static TestExitStatus invokeTestMethod(Method method, Object testClass) {
+    public static void invokeTestMethod(Method method, Object testClass)
+            throws InvocationTargetException, IllegalAccessException {
         method.setAccessible(true);
-        try {
-            method.invoke(testClass);
-        } catch (InvocationTargetException e) {
-            logger.error(e.getCause().getMessage(), e.getCause());
-            return TestExitStatus.FAIL;
-        } catch (IllegalAccessException e) {
-            logger.error(e.getMessage(), e);
-            return TestExitStatus.FAIL;
-        }
-        return TestExitStatus.SUCCESS;
+        method.invoke(testClass);
     }
 
     public static void displayStats(int totalTests, int successTests) {
@@ -58,17 +50,20 @@ public class TestHelper {
     }
 
     public static void runAfterMethods(Method[] afterMethods, Object testClass) {
-        for (Method afterMethod : afterMethods) {
-            invokeTestMethod(afterMethod, testClass);
+        try {
+            for (Method afterMethod : afterMethods) {
+                invokeTestMethod(afterMethod, testClass);
+            }
+        } catch (Exception e) {
+            logger.error("Error performing test tear-down");
+            throw new TestTearDownException(e);
         }
     }
 
-    public static TestExitStatus runBeforeMethods(Method[] beforeMethods, Object testClass) {
+    public static void runBeforeMethods(Method[] beforeMethods, Object testClass)
+            throws InvocationTargetException, IllegalAccessException {
         for (Method beforeMethod : beforeMethods) {
-            if (invokeTestMethod(beforeMethod, testClass) == TestExitStatus.FAIL) {
-                return TestExitStatus.FAIL;
-            }
+            invokeTestMethod(beforeMethod, testClass);
         }
-        return TestExitStatus.SUCCESS;
     }
 }
