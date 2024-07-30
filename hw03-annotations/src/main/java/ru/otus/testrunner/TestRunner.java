@@ -10,7 +10,6 @@ import ru.otus.annotations.After;
 import ru.otus.annotations.Before;
 import ru.otus.annotations.Test;
 
-@SuppressWarnings("java:S1141")
 public class TestRunner {
     private static final Logger logger = LoggerFactory.getLogger(TestRunner.class);
 
@@ -30,11 +29,7 @@ public class TestRunner {
             Object testClassInstance = instantiateTestClass(testClass);
             try {
                 runBeforeMethods(beforeMethods, testClassInstance);
-                try {
-                    invokeTestMethod(testMethod, testClassInstance);
-                } catch (InvocationTargetException e) {
-                    logger.error("Error in test: ", e.getCause());
-                }
+                runTestMethod(testMethod, testClassInstance);
             } catch (InvocationTargetException e) {
                 logger.error("Error performing setup: ", e.getCause());
             }

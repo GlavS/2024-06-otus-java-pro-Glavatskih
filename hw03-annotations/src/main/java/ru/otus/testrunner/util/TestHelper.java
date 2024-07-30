@@ -41,6 +41,16 @@ public class TestHelper {
         method.invoke(testClass);
     }
 
+    public static void runTestMethod(Method method, Object testClass) {
+        try {
+            invokeTestMethod(method, testClass);
+        } catch (InvocationTargetException e) {
+            logger.error("Error in test: ", e.getCause());
+        } catch (IllegalAccessException e) {
+            logger.error("Error accessing test method: ", e);
+        }
+    }
+
     public static void displayStats(int totalTests, int successTests) {
         logger.info("Tests complete: {}", totalTests);
         logger.info("Tests successful: {}", successTests);
