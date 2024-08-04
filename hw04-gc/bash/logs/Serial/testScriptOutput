@@ -1,0 +1,56 @@
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at java.base/java.util.Arrays.copyOf(Arrays.java:3513)
+        at java.base/java.util.Arrays.copyOf(Arrays.java:3482)
+        at java.base/java.util.ArrayList.grow(ArrayList.java:237)
+        at java.base/java.util.ArrayList.grow(ArrayList.java:244)
+        at java.base/java.util.ArrayList.add(ArrayList.java:483)
+        at java.base/java.util.ArrayList.add(ArrayList.java:496)
+        at ru.calculator.Summator.calc(Summator.java:16)
+        at ru.calculator.CalcDemo.main(CalcDemo.java:23)
+2024-08-04T16:41:14.582933863 current idx:0
+-Xms256m -Xmx256m -XX:+UseSerialGC
+
+spend msec:15907, sec:15
+-Xms512m -Xmx512m -XX:+UseSerialGC
+
+spend msec:13476, sec:13
+-Xms768m -Xmx768m -XX:+UseSerialGC
+
+spend msec:11736, sec:11
+-Xms1024m -Xmx1024m -XX:+UseSerialGC
+
+spend msec:10362, sec:10
+-Xms1280m -Xmx1280m -XX:+UseSerialGC
+
+spend msec:10582, sec:10
+-Xms1536m -Xmx1536m -XX:+UseSerialGC
+
+spend msec:9323, sec:9
+-Xms1792m -Xmx1792m -XX:+UseSerialGC
+
+spend msec:9444, sec:9
+-Xms2048m -Xmx2048m -XX:+UseSerialGC
+
+spend msec:8100, sec:8
+-Xms2304m -Xmx2304m -XX:+UseSerialGC
+
+spend msec:8052, sec:8
+-Xms2560m -Xmx2560m -XX:+UseSerialGC
+
+spend msec:7145, sec:7
+-Xms2816m -Xmx2816m -XX:+UseSerialGC
+
+spend msec:7466, sec:7
+-Xms3072m -Xmx3072m -XX:+UseSerialGC
+
+spend msec:7114, sec:7
+-Xms3328m -Xmx3328m -XX:+UseSerialGC
+
+spend msec:6197, sec:6
+-Xms3584m -Xmx3584m -XX:+UseSerialGC
+
+spend msec:7731, sec:7
+-Xms3840m -Xmx3840m -XX:+UseSerialGC
+
+spend msec:7098, sec:7
+-Xms4096m -Xmx4096m -XX:+UseSerialGC
