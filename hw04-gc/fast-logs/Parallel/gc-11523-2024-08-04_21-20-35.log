@@ -1,0 +1,18 @@
+[2024-08-04T21:20:35.952+0300][0.004s][info][gc] Using Parallel
+[2024-08-04T21:20:36.768+0300][0,821s][info][gc] GC(0) Pause Young (Allocation Failure) 961M->191M(3680M) 176,658ms
+[2024-08-04T21:20:37.141+0300][1,194s][info][gc] GC(1) Pause Young (Allocation Failure) 1151M->215M(3680M) 159,868ms
+[2024-08-04T21:20:37.471+0300][1,524s][info][gc] GC(2) Pause Young (Allocation Failure) 1175M->229M(3680M) 141,397ms
+[2024-08-04T21:20:37.783+0300][1,835s][info][gc] GC(3) Pause Young (Allocation Failure) 1189M->234M(3680M) 130,346ms
+[2024-08-04T21:20:38.090+0300][2,143s][info][gc] GC(4) Pause Young (Allocation Failure) 1194M->230M(3676M) 126,657ms
+[2024-08-04T21:20:38.390+0300][2,443s][info][gc] GC(5) Pause Young (Allocation Failure) 1190M->220M(3598M) 119,512ms
+[2024-08-04T21:20:38.706+0300][2,759s][info][gc] GC(6) Pause Young (Allocation Failure) 1094M->194M(3518M) 150,996ms
+[2024-08-04T21:20:38.898+0300][2,950s][info][gc] GC(7) Pause Young (Allocation Failure) 1068M->167M(3598M) 27,080ms
+[2024-08-04T21:20:39.070+0300][3,123s][info][gc] GC(8) Pause Young (Allocation Failure) 988M->130M(3401M) 16,495ms
+[2024-08-04T21:20:39.320+0300][3,372s][info][gc] GC(9) Pause Young (Allocation Failure) 951M->294M(3579M) 97,362ms
+[2024-08-04T21:20:39.526+0300][3,578s][info][gc] GC(10) Pause Young (Allocation Failure) 1070M->248M(3588M) 58,872ms
+[2024-08-04T21:20:39.740+0300][3,793s][info][gc] GC(11) Pause Young (Allocation Failure) 1024M->202M(3602M) 67,240ms
+[2024-08-04T21:20:39.931+0300][3,983s][info][gc] GC(12) Pause Young (Allocation Failure) 1003M->160M(3412M) 37,607ms
+[2024-08-04T21:20:40.091+0300][4,144s][info][gc] GC(13) Pause Young (Allocation Failure) 962M->119M(3582M) 9,539ms
+[2024-08-04T21:20:40.341+0300][4,394s][info][gc] GC(14) Pause Young (Allocation Failure) 900M->276M(3497M) 103,257ms
+[2024-08-04T21:20:40.543+0300][4,595s][info][gc] GC(15) Pause Young (Allocation Failure) 1057M->240M(3600M) 54,323ms
+[2024-08-04T21:20:40.726+0300][4,779s][info][gc] GC(16) Pause Young (Allocation Failure) 1028M->196M(3588M) 33,832ms

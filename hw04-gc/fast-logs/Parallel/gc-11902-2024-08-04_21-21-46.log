@@ -1,0 +1,9 @@
+[2024-08-04T21:21:46.381+0300][0.005s][info][gc] Using Parallel
+[2024-08-04T21:21:47.718+0300][1,342s][info][gc] GC(0) Pause Young (Allocation Failure) 1857M->163M(7115M) 147,717ms
+[2024-08-04T21:21:48.238+0300][1,863s][info][gc] GC(1) Pause Young (Allocation Failure) 2019M->128M(7115M) 131,154ms
+[2024-08-04T21:21:48.684+0300][2,309s][info][gc] GC(2) Pause Young (Allocation Failure) 1984M->96M(7115M) 90,319ms
+[2024-08-04T21:21:49.095+0300][2,720s][info][gc] GC(3) Pause Young (Allocation Failure) 1953M->65M(7115M) 61,717ms
+[2024-08-04T21:21:49.604+0300][3,228s][info][gc] GC(4) Pause Young (Allocation Failure) 1921M->235M(7115M) 161,865ms
+[2024-08-04T21:21:50.105+0300][3,730s][info][gc] GC(5) Pause Young (Allocation Failure) 2091M->203M(7133M) 148,245ms
+[2024-08-04T21:21:50.682+0300][4,306s][info][gc] GC(6) Pause Young (Allocation Failure) 2132M->186M(7151M) 208,930ms
+[2024-08-04T21:21:51.105+0300][4,730s][info][gc] GC(7) Pause Young (Allocation Failure) 2116M->169M(7177M) 61,866ms

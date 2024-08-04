@@ -1,0 +1,48 @@
+./test.sh
+spend msec:3428, sec:3
+-Xms256m -Xmx256m -XX:+UseSerialGC
+
+spend msec:2270, sec:2
+-Xms512m -Xmx512m -XX:+UseSerialGC
+
+spend msec:2099, sec:2
+-Xms768m -Xmx768m -XX:+UseSerialGC
+
+spend msec:1577, sec:1
+-Xms1024m -Xmx1024m -XX:+UseSerialGC
+
+spend msec:1485, sec:1
+-Xms1280m -Xmx1280m -XX:+UseSerialGC
+
+spend msec:1738, sec:1
+-Xms1536m -Xmx1536m -XX:+UseSerialGC
+
+spend msec:1460, sec:1
+-Xms1792m -Xmx1792m -XX:+UseSerialGC
+
+spend msec:1513, sec:1
+-Xms2048m -Xmx2048m -XX:+UseSerialGC
+
+spend msec:1572, sec:1
+-Xms2304m -Xmx2304m -XX:+UseSerialGC
+
+spend msec:1466, sec:1
+-Xms2560m -Xmx2560m -XX:+UseSerialGC
+
+spend msec:1625, sec:1
+-Xms2816m -Xmx2816m -XX:+UseSerialGC
+
+spend msec:1647, sec:1
+-Xms3072m -Xmx3072m -XX:+UseSerialGC
+
+spend msec:1506, sec:1
+-Xms3328m -Xmx3328m -XX:+UseSerialGC
+
+spend msec:1612, sec:1
+-Xms3584m -Xmx3584m -XX:+UseSerialGC
+
+spend msec:1593, sec:1
+-Xms3840m -Xmx3840m -XX:+UseSerialGC
+
+spend msec:1588, sec:1
+-Xms4096m -Xmx4096m -XX:+UseSerialGC

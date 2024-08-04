@@ -1,0 +1,20 @@
+[2024-08-04T21:39:30.531+0300][0.005s][info][gc] Using G1
+[2024-08-04T21:39:30.532+0300][0.006s][debug][gc] ConcGCThreads: 3 offset 22
+[2024-08-04T21:39:30.532+0300][0.006s][debug][gc] ParallelGCThreads: 10
+[2024-08-04T21:39:30.532+0300][0.006s][debug][gc] Initialize mark stack with 4096 chunks, maximum 524288
+[2024-08-04T21:39:30.722+0300][0,195s][info ][gc] GC(0) Pause Young (Normal) (G1 Evacuation Pause) 73M->71M(768M) 34,294ms
+[2024-08-04T21:39:30.793+0300][0,267s][info ][gc] GC(1) Pause Young (Normal) (G1 Evacuation Pause) 144M->147M(768M) 31,702ms
+[2024-08-04T21:39:30.856+0300][0,330s][info ][gc] GC(2) Pause Young (Normal) (G1 Evacuation Pause) 216M->218M(768M) 25,891ms
+[2024-08-04T21:39:30.916+0300][0,390s][info ][gc] GC(3) Pause Young (Normal) (G1 Evacuation Pause) 251M->253M(768M) 15,776ms
+[2024-08-04T21:39:30.961+0300][0,435s][info ][gc] GC(4) Pause Young (Normal) (G1 Evacuation Pause) 289M->292M(768M) 16,574ms
+[2024-08-04T21:39:31.013+0300][0,487s][info ][gc] GC(5) Pause Young (Normal) (G1 Evacuation Pause) 340M->305M(768M) 10,506ms
+[2024-08-04T21:39:31.238+0300][0,711s][info ][gc] GC(6) Pause Young (Normal) (G1 Evacuation Pause) 513M->321M(768M) 16,290ms
+[2024-08-04T21:39:31.602+0300][1,076s][info ][gc] GC(7) Pause Young (Normal) (G1 Evacuation Pause) (Evacuation Failure) 693M->399M(768M) 51,602ms
+[2024-08-04T21:39:31.699+0300][1,173s][info ][gc] GC(8) Pause Young (Concurrent Start) (G1 Evacuation Pause) 487M->430M(768M) 34,246ms
+[2024-08-04T21:39:31.699+0300][1,173s][info ][gc] GC(9) Concurrent Mark Cycle
+[2024-08-04T21:39:31.729+0300][1,203s][debug][gc] GC(9) Reclaimed 298 empty regions
+[2024-08-04T21:39:31.729+0300][1,203s][info ][gc] GC(9) Pause Remark 452M->154M(768M) 0,973ms
+[2024-08-04T21:39:31.745+0300][1,219s][info ][gc] GC(9) Pause Cleanup 178M->178M(768M) 0,254ms
+[2024-08-04T21:39:31.749+0300][1,222s][info ][gc] GC(9) Concurrent Mark Cycle 49,567ms
+[2024-08-04T21:39:31.863+0300][1,337s][info ][gc] GC(10) Pause Young (Prepare Mixed) (G1 Evacuation Pause) 315M->176M(768M) 27,936ms
+[2024-08-04T21:39:32.195+0300][1,668s][info ][gc] GC(11) Pause Young (Mixed) (G1 Evacuation Pause) 610M->241M(768M) 41,735ms

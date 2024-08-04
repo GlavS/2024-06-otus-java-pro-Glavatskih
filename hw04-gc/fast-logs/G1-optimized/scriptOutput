@@ -1,0 +1,48 @@
+./test.sh
+spend msec:2338, sec:2
+-Xms256m -Xmx256m -XX:+UseG1GC
+
+spend msec:1580, sec:1
+-Xms512m -Xmx512m -XX:+UseG1GC
+
+spend msec:1633, sec:1
+-Xms768m -Xmx768m -XX:+UseG1GC
+
+spend msec:1599, sec:1
+-Xms1024m -Xmx1024m -XX:+UseG1GC
+
+spend msec:1723, sec:1
+-Xms1280m -Xmx1280m -XX:+UseG1GC
+
+spend msec:1770, sec:1
+-Xms1536m -Xmx1536m -XX:+UseG1GC
+
+spend msec:1746, sec:1
+-Xms1792m -Xmx1792m -XX:+UseG1GC
+
+spend msec:1716, sec:1
+-Xms2048m -Xmx2048m -XX:+UseG1GC
+
+spend msec:1574, sec:1
+-Xms2304m -Xmx2304m -XX:+UseG1GC
+
+spend msec:1660, sec:1
+-Xms2560m -Xmx2560m -XX:+UseG1GC
+
+spend msec:1669, sec:1
+-Xms2816m -Xmx2816m -XX:+UseG1GC
+
+spend msec:1628, sec:1
+-Xms3072m -Xmx3072m -XX:+UseG1GC
+
+spend msec:1557, sec:1
+-Xms3328m -Xmx3328m -XX:+UseG1GC
+
+spend msec:1642, sec:1
+-Xms3584m -Xmx3584m -XX:+UseG1GC
+
+spend msec:1582, sec:1
+-Xms3840m -Xmx3840m -XX:+UseG1GC
+
+spend msec:1600, sec:1
+-Xms4096m -Xmx4096m -XX:+UseG1GC
