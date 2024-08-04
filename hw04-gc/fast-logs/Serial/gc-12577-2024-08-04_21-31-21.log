@@ -1,0 +1,18 @@
+[2024-08-04T21:31:21.602+0300][0.005s][info][gc] Using Serial
+[2024-08-04T21:31:22.613+0300][1,016s][info][gc] GC(0) Pause Young (Allocation Failure) 888M->177M(3217M) 419,747ms
+[2024-08-04T21:31:23.126+0300][1,529s][info][gc] GC(1) Pause Young (Allocation Failure) 1065M->222M(3217M) 305,502ms
+[2024-08-04T21:31:23.461+0300][1,864s][info][gc] GC(2) Pause Young (Allocation Failure) 1109M->242M(3217M) 150,703ms
+[2024-08-04T21:31:23.801+0300][2,204s][info][gc] GC(3) Pause Young (Allocation Failure) 1130M->218M(3217M) 156,185ms
+[2024-08-04T21:31:24.083+0300][2,486s][info][gc] GC(4) Pause Young (Allocation Failure) 1106M->194M(3217M) 102,360ms
+[2024-08-04T21:31:24.325+0300][2,728s][info][gc] GC(5) Pause Young (Allocation Failure) 1082M->170M(3217M) 62,680ms
+[2024-08-04T21:31:24.522+0300][2,925s][info][gc] GC(6) Pause Young (Allocation Failure) 1058M->146M(3217M) 19,586ms
+[2024-08-04T21:31:25.101+0300][3,504s][info][gc] GC(7) Pause Young (Allocation Failure) 1034M->324M(3217M) 404,082ms
+[2024-08-04T21:31:25.616+0300][4,019s][info][gc] GC(8) Pause Young (Allocation Failure) 1211M->367M(3217M) 336,762ms
+[2024-08-04T21:31:26.073+0300][4,476s][info][gc] GC(9) Pause Young (Allocation Failure) 1254M->386M(3217M) 279,183ms
+[2024-08-04T21:31:26.461+0300][4,864s][info][gc] GC(10) Pause Young (Allocation Failure) 1273M->381M(3217M) 207,745ms
+[2024-08-04T21:31:26.814+0300][5,217s][info][gc] GC(11) Pause Young (Allocation Failure) 1269M->357M(3217M) 176,581ms
+[2024-08-04T21:31:27.120+0300][5,523s][info][gc] GC(12) Pause Young (Allocation Failure) 1245M->333M(3217M) 128,575ms
+[2024-08-04T21:31:27.380+0300][5,783s][info][gc] GC(13) Pause Young (Allocation Failure) 1221M->309M(3217M) 82,354ms
+[2024-08-04T21:31:27.592+0300][5,995s][info][gc] GC(14) Pause Young (Allocation Failure) 1197M->285M(3217M) 34,882ms
+[2024-08-04T21:31:28.203+0300][6,606s][info][gc] GC(15) Pause Young (Allocation Failure) 1173M->463M(3217M) 437,015ms
+[2024-08-04T21:31:28.753+0300][7,156s][info][gc] GC(16) Pause Young (Allocation Failure) 1351M->516M(3217M) 362,692ms

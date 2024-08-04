@@ -1,0 +1,2 @@
+[2024-08-04T21:45:01.990+0300][0.005s][info][gc] Using Serial
+[2024-08-04T21:45:03.022+0300][1,037s][info][gc] GC(0) Pause Young (Allocation Failure) 888M->59M(3217M) 104,957ms

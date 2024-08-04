@@ -1,0 +1,105 @@
+./test.sh
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at java.base/java.util.Arrays.copyOf(Arrays.java:3513)
+        at java.base/java.util.Arrays.copyOf(Arrays.java:3482)
+        at java.base/java.util.ArrayList.grow(ArrayList.java:237)
+        at java.base/java.util.ArrayList.grow(ArrayList.java:244)
+        at java.base/java.util.ArrayList.add(ArrayList.java:483)
+        at java.base/java.util.ArrayList.add(ArrayList.java:496)
+        at ru.calculator.Summator.calc(Summator.java:16)
+        at ru.calculator.CalcDemo.main(CalcDemo.java:23)
+2024-08-04T21:29:22.318116263 current idx:0
+-Xms256m -Xmx256m -XX:+UseSerialGC
+
+spend msec:16265, sec:16
+-Xms512m -Xmx512m -XX:+UseSerialGC
+
+spend msec:14392, sec:14
+-Xms768m -Xmx768m -XX:+UseSerialGC
+
+spend msec:12049, sec:12
+-Xms1024m -Xmx1024m -XX:+UseSerialGC
+
+spend msec:10582, sec:10
+-Xms1280m -Xmx1280m -XX:+UseSerialGC
+
+spend msec:10686, sec:10
+-Xms1536m -Xmx1536m -XX:+UseSerialGC
+
+spend msec:9364, sec:9
+-Xms1792m -Xmx1792m -XX:+UseSerialGC
+
+spend msec:9432, sec:9
+-Xms2048m -Xmx2048m -XX:+UseSerialGC
+
+spend msec:8312, sec:8
+-Xms2304m -Xmx2304m -XX:+UseSerialGC
+
+spend msec:8056, sec:8
+-Xms2560m -Xmx2560m -XX:+UseSerialGC
+
+spend msec:7129, sec:7
+-Xms2816m -Xmx2816m -XX:+UseSerialGC
+
+spend msec:7397, sec:7
+-Xms3072m -Xmx3072m -XX:+UseSerialGC
+
+spend msec:7183, sec:7
+-Xms3328m -Xmx3328m -XX:+UseSerialGC
+
+spend msec:6230, sec:6
+-Xms3584m -Xmx3584m -XX:+UseSerialGC
+
+spend msec:7729, sec:7
+-Xms3840m -Xmx3840m -XX:+UseSerialGC
+
+spend msec:7055, sec:7
+-Xms4096m -Xmx4096m -XX:+UseSerialGC
+
+spend msec:6282, sec:6
+-Xms4352m -Xmx4352m -XX:+UseSerialGC
+
+spend msec:5701, sec:5
+-Xms4608m -Xmx4608m -XX:+UseSerialGC
+
+spend msec:6137, sec:6
+-Xms4864m -Xmx4864m -XX:+UseSerialGC
+
+spend msec:5839, sec:5
+-Xms5120m -Xmx5120m -XX:+UseSerialGC
+
+spend msec:5520, sec:5
+-Xms5376m -Xmx5376m -XX:+UseSerialGC
+
+spend msec:5706, sec:5
+-Xms5632m -Xmx5632m -XX:+UseSerialGC
+
+spend msec:5492, sec:5
+-Xms5888m -Xmx5888m -XX:+UseSerialGC
+
+spend msec:5685, sec:5
+-Xms6144m -Xmx6144m -XX:+UseSerialGC
+
+spend msec:5627, sec:5
+-Xms6400m -Xmx6400m -XX:+UseSerialGC
+
+spend msec:5266, sec:5
+-Xms6656m -Xmx6656m -XX:+UseSerialGC
+
+spend msec:5498, sec:5
+-Xms6912m -Xmx6912m -XX:+UseSerialGC
+
+spend msec:5337, sec:5
+-Xms7168m -Xmx7168m -XX:+UseSerialGC
+
+spend msec:5716, sec:5
+-Xms7424m -Xmx7424m -XX:+UseSerialGC
+
+spend msec:6448, sec:6
+-Xms7680m -Xmx7680m -XX:+UseSerialGC
+
+spend msec:5258, sec:5
+-Xms7936m -Xmx7936m -XX:+UseSerialGC
+
+spend msec:5667, sec:5
+-Xms8192m -Xmx8192m -XX:+UseSerialGC
