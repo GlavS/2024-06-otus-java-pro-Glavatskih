@@ -1,0 +1,974 @@
+G1GC:
+
+sergey@Legion5:~/IdeaProjects/2024-06-otus-java-pro-Glavatskih/hw04-gc/bash$ ./test.sh
+-XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=10 -XX:GCDrainStackTargetSize=64 -XX:InitialHeapSize=268435456 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=268435456 -XX:MinHeapSize=268435456 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseG1GC
+21:53:28.967 [main] INFO ru.calculator.CalcDemo -- Current heap size: 256Mb
+21:53:28.970 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:53:28.970523073 current idx:0
+21:53:31.318 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:53:31.318939055 current idx:100000
+21:53:33.661 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:53:33.661957220 current idx:200000
+21:53:35.902 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:53:35.902616823 current idx:300000
+21:53:38.074 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:53:38.074935628 current idx:400000
+21:53:40.287 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:53:40.286964358 current idx:500000
+21:53:42.469 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:53:42.469103665 current idx:600000
+21:53:44.646 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:53:44.646828485 current idx:700000
+21:53:46.804 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:53:46.804464360 current idx:800000
+21:53:49.032 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:53:49.032772844 current idx:900000
+21:53:51.298 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+21:53:51.298 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+21:53:51.298 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+21:53:51.298 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+21:53:51.298 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+21:53:51.298 [main] INFO ru.calculator.CalcDemo -- spend msec:22328, sec:22
+-Xms256m -Xmx256m -XX:+UseG1GC -XX:+PrintCommandLineFlags
+
+-XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=10 -XX:GCDrainStackTargetSize=64 -XX:InitialHeapSize=536870912 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=536870912 -XX:MinHeapSize=536870912 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseG1GC
+21:53:51.469 [main] INFO ru.calculator.CalcDemo -- Current heap size: 512Mb
+21:53:51.472 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:53:51.472859586 current idx:0
+21:53:53.816 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:53:53.816430489 current idx:100000
+21:53:56.085 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:53:56.085423583 current idx:200000
+21:53:58.271 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:53:58.271276155 current idx:300000
+21:54:00.448 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:00.448054755 current idx:400000
+21:54:02.659 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:02.659902083 current idx:500000
+21:54:04.834 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:04.834940124 current idx:600000
+21:54:07.017 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:07.017134317 current idx:700000
+21:54:09.237 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:09.237583876 current idx:800000
+21:54:11.428 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:11.428332535 current idx:900000
+21:54:13.618 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+21:54:13.618 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+21:54:13.618 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+21:54:13.618 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+21:54:13.618 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+21:54:13.618 [main] INFO ru.calculator.CalcDemo -- spend msec:22146, sec:22
+-Xms512m -Xmx512m -XX:+UseG1GC -XX:+PrintCommandLineFlags
+
+-XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=10 -XX:GCDrainStackTargetSize=64 -XX:InitialHeapSize=805306368 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=805306368 -XX:MinHeapSize=805306368 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseG1GC
+21:54:13.772 [main] INFO ru.calculator.CalcDemo -- Current heap size: 768Mb
+21:54:13.775 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:13.775355802 current idx:0
+21:54:16.080 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:16.080464907 current idx:100000
+21:54:18.296 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:18.296174074 current idx:200000
+21:54:20.522 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:20.522397777 current idx:300000
+21:54:22.710 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:22.710740119 current idx:400000
+21:54:24.987 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:24.987338704 current idx:500000
+21:54:27.245 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:27.245845155 current idx:600000
+21:54:29.569 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:29.569409447 current idx:700000
+21:54:31.756 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:31.756693936 current idx:800000
+21:54:33.936 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:33.936410691 current idx:900000
+21:54:36.104 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+21:54:36.104 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+21:54:36.104 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+21:54:36.104 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+21:54:36.104 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+21:54:36.104 [main] INFO ru.calculator.CalcDemo -- spend msec:22329, sec:22
+-Xms768m -Xmx768m -XX:+UseG1GC -XX:+PrintCommandLineFlags
+
+-XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=10 -XX:GCDrainStackTargetSize=64 -XX:InitialHeapSize=1073741824 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=1073741824 -XX:MinHeapSize=1073741824 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseG1GC
+21:54:36.281 [main] INFO ru.calculator.CalcDemo -- Current heap size: 1024Mb
+21:54:36.284 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:36.284148984 current idx:0
+21:54:38.671 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:38.671621402 current idx:100000
+21:54:41.032 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:41.032651716 current idx:200000
+21:54:43.330 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:43.330039059 current idx:300000
+21:54:45.523 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:45.523353327 current idx:400000
+21:54:47.843 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:47.843566298 current idx:500000
+21:54:50.052 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:50.052107526 current idx:600000
+21:54:52.227 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:52.227876613 current idx:700000
+21:54:54.411 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:54.411359967 current idx:800000
+21:54:56.692 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:56.692860250 current idx:900000
+21:54:58.941 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+21:54:58.941 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+21:54:58.941 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+21:54:58.941 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+21:54:58.941 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+21:54:58.941 [main] INFO ru.calculator.CalcDemo -- spend msec:22658, sec:22
+-Xms1024m -Xmx1024m -XX:+UseG1GC -XX:+PrintCommandLineFlags
+
+-XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=10 -XX:GCDrainStackTargetSize=64 -XX:InitialHeapSize=1342177280 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=1342177280 -XX:MinHeapSize=1342177280 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseG1GC
+21:54:59.098 [main] INFO ru.calculator.CalcDemo -- Current heap size: 1280Mb
+21:54:59.101 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:54:59.101826892 current idx:0
+21:55:01.531 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:01.531840679 current idx:100000
+21:55:03.771 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:03.771134883 current idx:200000
+21:55:05.960 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:05.960572253 current idx:300000
+21:55:08.201 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:08.201585356 current idx:400000
+21:55:10.378 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:10.378767579 current idx:500000
+21:55:12.534 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:12.534866894 current idx:600000
+21:55:14.724 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:14.724592102 current idx:700000
+21:55:16.940 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:16.939964095 current idx:800000
+21:55:19.165 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:19.165388892 current idx:900000
+21:55:21.376 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+21:55:21.376 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+21:55:21.376 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+21:55:21.376 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+21:55:21.376 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+21:55:21.376 [main] INFO ru.calculator.CalcDemo -- spend msec:22275, sec:22
+-Xms1280m -Xmx1280m -XX:+UseG1GC -XX:+PrintCommandLineFlags
+
+-XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=10 -XX:GCDrainStackTargetSize=64 -XX:InitialHeapSize=1610612736 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=1610612736 -XX:MinHeapSize=1610612736 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseG1GC
+21:55:21.546 [main] INFO ru.calculator.CalcDemo -- Current heap size: 1536Mb
+21:55:21.549 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:21.549339181 current idx:0
+21:55:23.930 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:23.930144801 current idx:100000
+21:55:26.240 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:26.240007609 current idx:200000
+21:55:28.406 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:28.406509386 current idx:300000
+21:55:30.581 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:30.581258820 current idx:400000
+21:55:32.806 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:32.806167916 current idx:500000
+21:55:35.010 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:35.010853245 current idx:600000
+21:55:37.195 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:37.195513229 current idx:700000
+21:55:39.362 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:39.362375154 current idx:800000
+21:55:41.546 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:41.546933465 current idx:900000
+21:55:43.744 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+21:55:43.744 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+21:55:43.744 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+21:55:43.744 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+21:55:43.744 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+21:55:43.744 [main] INFO ru.calculator.CalcDemo -- spend msec:22195, sec:22
+-Xms1536m -Xmx1536m -XX:+UseG1GC -XX:+PrintCommandLineFlags
+
+-XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=10 -XX:GCDrainStackTargetSize=64 -XX:InitialHeapSize=1879048192 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=1879048192 -XX:MinHeapSize=1879048192 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseG1GC
+21:55:43.944 [main] INFO ru.calculator.CalcDemo -- Current heap size: 1792Mb
+21:55:43.947 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:43.947396508 current idx:0
+21:55:46.219 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:46.219598104 current idx:100000
+21:55:48.518 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:48.518411560 current idx:200000
+21:55:50.784 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:50.784089655 current idx:300000
+21:55:53.023 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:53.023711989 current idx:400000
+21:55:55.296 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:55.295976392 current idx:500000
+21:55:57.517 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:57.517357313 current idx:600000
+21:55:59.691 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:55:59.691226549 current idx:700000
+21:56:01.902 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:01.902627958 current idx:800000
+21:56:04.084 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:04.084382446 current idx:900000
+21:56:06.272 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+21:56:06.272 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+21:56:06.272 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+21:56:06.272 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+21:56:06.272 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+21:56:06.272 [main] INFO ru.calculator.CalcDemo -- spend msec:22325, sec:22
+-Xms1792m -Xmx1792m -XX:+UseG1GC -XX:+PrintCommandLineFlags
+
+-XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=10 -XX:GCDrainStackTargetSize=64 -XX:InitialHeapSize=2147483648 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=2147483648 -XX:MinHeapSize=2147483648 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseG1GC
+21:56:06.432 [main] INFO ru.calculator.CalcDemo -- Current heap size: 2048Mb
+21:56:06.435 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:06.435667161 current idx:0
+21:56:08.808 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:08.808734951 current idx:100000
+21:56:11.196 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:11.196870375 current idx:200000
+21:56:13.474 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:13.474108739 current idx:300000
+21:56:15.720 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:15.720137597 current idx:400000
+21:56:17.889 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:17.889637276 current idx:500000
+21:56:20.061 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:20.061326604 current idx:600000
+21:56:22.311 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:22.311123920 current idx:700000
+21:56:24.486 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:24.486767551 current idx:800000
+21:56:26.713 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:26.713855502 current idx:900000
+21:56:28.884 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+21:56:28.884 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+21:56:28.884 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+21:56:28.884 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+21:56:28.884 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+21:56:28.884 [main] INFO ru.calculator.CalcDemo -- spend msec:22449, sec:22
+-Xms2048m -Xmx2048m -XX:+UseG1GC -XX:+PrintCommandLineFlags
+
+-XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=10 -XX:GCDrainStackTargetSize=64 -XX:InitialHeapSize=2415919104 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=2415919104 -XX:MinHeapSize=2415919104 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseG1GC
+21:56:29.080 [main] INFO ru.calculator.CalcDemo -- Current heap size: 2304Mb
+21:56:29.083 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:29.083382744 current idx:0
+21:56:32.019 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:32.019027591 current idx:100000
+21:56:34.926 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:34.926253181 current idx:200000
+21:56:37.768 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:37.768447267 current idx:300000
+21:56:40.603 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:40.603003137 current idx:400000
+21:56:43.464 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:43.464823920 current idx:500000
+21:56:46.257 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:46.257014497 current idx:600000
+21:56:49.058 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:49.058846125 current idx:700000
+21:56:51.851 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:51.851635844 current idx:800000
+21:56:54.647 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:54.647118536 current idx:900000
+21:56:57.450 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+21:56:57.451 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+21:56:57.451 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+21:56:57.451 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+21:56:57.451 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+21:56:57.451 [main] INFO ru.calculator.CalcDemo -- spend msec:28367, sec:28
+-Xms2304m -Xmx2304m -XX:+UseG1GC -XX:+PrintCommandLineFlags
+
+-XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=10 -XX:GCDrainStackTargetSize=64 -XX:InitialHeapSize=2684354560 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=2684354560 -XX:MinHeapSize=2684354560 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseG1GC
+21:56:57.608 [main] INFO ru.calculator.CalcDemo -- Current heap size: 2560Mb
+21:56:57.611 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:56:57.611762279 current idx:0
+21:57:00.563 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:00.563078427 current idx:100000
+21:57:03.390 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:03.390637442 current idx:200000
+21:57:06.172 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:06.172715454 current idx:300000
+21:57:08.948 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:08.948525642 current idx:400000
+21:57:11.738 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:11.738948134 current idx:500000
+21:57:14.536 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:14.536448946 current idx:600000
+21:57:17.341 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:17.340996438 current idx:700000
+21:57:20.202 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:20.202642994 current idx:800000
+21:57:23.012 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:23.012406230 current idx:900000
+21:57:25.810 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+21:57:25.810 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+21:57:25.810 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+21:57:25.810 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+21:57:25.810 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+21:57:25.810 [main] INFO ru.calculator.CalcDemo -- spend msec:28199, sec:28
+-Xms2560m -Xmx2560m -XX:+UseG1GC -XX:+PrintCommandLineFlags
+
+-XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=10 -XX:GCDrainStackTargetSize=64 -XX:InitialHeapSize=2952790016 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=2952790016 -XX:MinHeapSize=2952790016 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseG1GC
+21:57:25.988 [main] INFO ru.calculator.CalcDemo -- Current heap size: 2816Mb
+21:57:25.991 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:25.991095447 current idx:0
+21:57:29.030 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:29.030838338 current idx:100000
+21:57:31.990 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:31.990864953 current idx:200000
+21:57:34.819 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:34.819546159 current idx:300000
+21:57:37.614 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:37.614251893 current idx:400000
+21:57:40.454 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:40.454578550 current idx:500000
+21:57:43.300 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:43.300912910 current idx:600000
+21:57:46.182 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:46.182358215 current idx:700000
+21:57:49.012 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:49.012888443 current idx:800000
+21:57:51.845 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:51.845388848 current idx:900000
+21:57:54.689 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+21:57:54.689 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+21:57:54.689 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+21:57:54.689 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+21:57:54.689 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+21:57:54.689 [main] INFO ru.calculator.CalcDemo -- spend msec:28699, sec:28
+-Xms2816m -Xmx2816m -XX:+UseG1GC -XX:+PrintCommandLineFlags
+
+-XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=10 -XX:GCDrainStackTargetSize=64 -XX:InitialHeapSize=3221225472 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=3221225472 -XX:MinHeapSize=3221225472 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseG1GC
+21:57:54.845 [main] INFO ru.calculator.CalcDemo -- Current heap size: 3072Mb
+21:57:54.848 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:54.848872332 current idx:0
+21:57:57.740 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:57:57.740224046 current idx:100000
+21:58:00.588 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:00.588004353 current idx:200000
+21:58:03.405 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:03.405783238 current idx:300000
+21:58:06.192 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:06.192439384 current idx:400000
+21:58:08.983 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:08.983907952 current idx:500000
+21:58:11.783 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:11.783289182 current idx:600000
+21:58:14.566 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:14.566812176 current idx:700000
+21:58:17.367 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:17.367401602 current idx:800000
+21:58:20.169 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:20.169468543 current idx:900000
+21:58:22.972 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+21:58:22.972 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+21:58:22.972 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+21:58:22.972 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+21:58:22.972 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+21:58:22.972 [main] INFO ru.calculator.CalcDemo -- spend msec:28124, sec:28
+-Xms3072m -Xmx3072m -XX:+UseG1GC -XX:+PrintCommandLineFlags
+
+-XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=10 -XX:GCDrainStackTargetSize=64 -XX:InitialHeapSize=3489660928 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=3489660928 -XX:MinHeapSize=3489660928 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseG1GC
+21:58:23.164 [main] INFO ru.calculator.CalcDemo -- Current heap size: 3328Mb
+21:58:23.167 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:23.167439304 current idx:0
+21:58:26.116 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:26.116697909 current idx:100000
+21:58:29.028 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:29.028953597 current idx:200000
+21:58:31.830 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:31.830756575 current idx:300000
+21:58:34.627 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:34.627915864 current idx:400000
+21:58:37.460 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:37.460776470 current idx:500000
+21:58:40.279 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:40.279490685 current idx:600000
+21:58:43.071 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:43.071012422 current idx:700000
+21:58:45.876 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:45.876742007 current idx:800000
+21:58:48.687 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:48.687168079 current idx:900000
+21:58:51.479 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+21:58:51.479 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+21:58:51.479 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+21:58:51.479 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+21:58:51.479 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+21:58:51.479 [main] INFO ru.calculator.CalcDemo -- spend msec:28312, sec:28
+-Xms3328m -Xmx3328m -XX:+UseG1GC -XX:+PrintCommandLineFlags
+
+-XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=10 -XX:GCDrainStackTargetSize=64 -XX:InitialHeapSize=3758096384 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=3758096384 -XX:MinHeapSize=3758096384 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseG1GC
+21:58:51.673 [main] INFO ru.calculator.CalcDemo -- Current heap size: 3584Mb
+21:58:51.676 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:51.676209954 current idx:0
+21:58:54.601 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:54.600978295 current idx:100000
+21:58:57.511 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:58:57.511084529 current idx:200000
+21:59:00.352 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:00.352712441 current idx:300000
+21:59:03.215 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:03.215592442 current idx:400000
+21:59:06.030 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:06.030778759 current idx:500000
+21:59:08.822 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:08.821981869 current idx:600000
+21:59:11.634 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:11.634168456 current idx:700000
+21:59:14.468 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:14.468759812 current idx:800000
+21:59:17.297 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:17.297388718 current idx:900000
+21:59:20.140 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+21:59:20.140 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+21:59:20.140 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+21:59:20.141 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+21:59:20.141 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+21:59:20.141 [main] INFO ru.calculator.CalcDemo -- spend msec:28464, sec:28
+-Xms3584m -Xmx3584m -XX:+UseG1GC -XX:+PrintCommandLineFlags
+
+-XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=10 -XX:GCDrainStackTargetSize=64 -XX:InitialHeapSize=4026531840 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=4026531840 -XX:MinHeapSize=4026531840 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseG1GC
+21:59:20.318 [main] INFO ru.calculator.CalcDemo -- Current heap size: 3840Mb
+21:59:20.321 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:20.321361146 current idx:0
+21:59:23.292 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:23.292248193 current idx:100000
+21:59:26.269 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:26.269303095 current idx:200000
+21:59:29.081 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:29.081573640 current idx:300000
+21:59:31.909 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:31.909846913 current idx:400000
+21:59:34.718 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:34.718664734 current idx:500000
+21:59:37.521 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:37.521248144 current idx:600000
+21:59:40.358 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:40.358104093 current idx:700000
+21:59:43.158 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:43.158286541 current idx:800000
+21:59:45.944 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:45.944148988 current idx:900000
+21:59:48.745 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+21:59:48.745 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+21:59:48.745 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+21:59:48.745 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+21:59:48.745 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+21:59:48.745 [main] INFO ru.calculator.CalcDemo -- spend msec:28424, sec:28
+-Xms3840m -Xmx3840m -XX:+UseG1GC -XX:+PrintCommandLineFlags
+
+-XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=10 -XX:GCDrainStackTargetSize=64 -XX:InitialHeapSize=4294967296 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=4294967296 -XX:MinHeapSize=4294967296 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseG1GC
+21:59:48.907 [main] INFO ru.calculator.CalcDemo -- Current heap size: 4096Mb
+21:59:48.910 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:48.910073179 current idx:0
+21:59:51.873 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:51.873005529 current idx:100000
+21:59:54.802 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:54.802208935 current idx:200000
+21:59:57.640 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T21:59:57.640314673 current idx:300000
+22:00:00.462 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:00:00.462731780 current idx:400000
+22:00:03.306 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:00:03.306298375 current idx:500000
+22:00:06.126 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:00:06.126366907 current idx:600000
+22:00:08.940 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:00:08.940661223 current idx:700000
+22:00:11.764 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:00:11.764185088 current idx:800000
+22:00:14.575 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:00:14.575535075 current idx:900000
+22:00:17.404 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:00:17.404 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:00:17.404 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:00:17.404 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:00:17.404 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:00:17.404 [main] INFO ru.calculator.CalcDemo -- spend msec:28495, sec:28
+-Xms4096m -Xmx4096m -XX:+UseG1GC -XX:+PrintCommandLineFlags
+
+==================================================================================================================
+
+ParallelGC:
+
+sergey@Legion5:~/IdeaProjects/2024-06-otus-java-pro-Glavatskih/hw04-gc/bash$ ./test.sh
+-XX:InitialHeapSize=268435456 -XX:MaxHeapSize=268435456 -XX:MinHeapSize=268435456 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseParallelGC
+22:01:40.986 [main] INFO ru.calculator.CalcDemo -- Current heap size: 245Mb
+22:01:40.989 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:01:40.989114895 current idx:0
+22:01:43.375 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:01:43.375358530 current idx:100000
+22:01:45.585 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:01:45.585340178 current idx:200000
+22:01:47.929 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:01:47.929847885 current idx:300000
+22:01:50.094 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:01:50.094240476 current idx:400000
+22:01:52.283 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:01:52.283170486 current idx:500000
+22:01:54.493 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:01:54.493495565 current idx:600000
+22:01:56.726 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:01:56.726944243 current idx:700000
+22:01:58.942 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:01:58.942576306 current idx:800000
+22:02:01.131 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:01.131419661 current idx:900000
+22:02:03.287 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:02:03.287 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:02:03.287 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:02:03.287 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:02:03.287 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:02:03.287 [main] INFO ru.calculator.CalcDemo -- spend msec:22299, sec:22
+-Xms256m -Xmx256m -XX:+UseParallelGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=536870912 -XX:MaxHeapSize=536870912 -XX:MinHeapSize=536870912 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseParallelGC
+22:02:03.429 [main] INFO ru.calculator.CalcDemo -- Current heap size: 491Mb
+22:02:03.432 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:03.432090148 current idx:0
+22:02:05.756 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:05.756569803 current idx:100000
+22:02:07.970 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:07.970047036 current idx:200000
+22:02:10.186 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:10.186420813 current idx:300000
+22:02:12.432 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:12.432610622 current idx:400000
+22:02:14.596 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:14.596649626 current idx:500000
+22:02:16.757 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:16.757289583 current idx:600000
+22:02:18.918 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:18.918683392 current idx:700000
+22:02:21.070 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:21.070687981 current idx:800000
+22:02:23.222 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:23.222918833 current idx:900000
+22:02:25.377 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:02:25.377 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:02:25.377 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:02:25.377 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:02:25.377 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:02:25.377 [main] INFO ru.calculator.CalcDemo -- spend msec:21946, sec:21
+-Xms512m -Xmx512m -XX:+UseParallelGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=805306368 -XX:MaxHeapSize=805306368 -XX:MinHeapSize=805306368 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseParallelGC
+22:02:25.552 [main] INFO ru.calculator.CalcDemo -- Current heap size: 736Mb
+22:02:25.555 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:25.555473948 current idx:0
+22:02:27.939 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:27.939519067 current idx:100000
+22:02:30.215 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:30.215577642 current idx:200000
+22:02:32.422 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:32.422560052 current idx:300000
+22:02:34.599 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:34.599753544 current idx:400000
+22:02:36.856 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:36.856191074 current idx:500000
+22:02:39.078 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:39.078901903 current idx:600000
+22:02:41.316 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:41.316199981 current idx:700000
+22:02:43.496 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:43.496807677 current idx:800000
+22:02:45.676 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:45.676233125 current idx:900000
+22:02:47.829 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:02:47.829 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:02:47.829 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:02:47.829 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:02:47.829 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:02:47.829 [main] INFO ru.calculator.CalcDemo -- spend msec:22274, sec:22
+-Xms768m -Xmx768m -XX:+UseParallelGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=1073741824 -XX:MaxHeapSize=1073741824 -XX:MinHeapSize=1073741824 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseParallelGC
+22:02:47.969 [main] INFO ru.calculator.CalcDemo -- Current heap size: 981Mb
+22:02:47.972 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:47.972051972 current idx:0
+22:02:50.368 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:50.368260603 current idx:100000
+22:02:52.624 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:52.624481840 current idx:200000
+22:02:54.876 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:54.876582909 current idx:300000
+22:02:57.046 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:57.046267653 current idx:400000
+22:02:59.188 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:02:59.188343195 current idx:500000
+22:03:01.348 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:01.348632204 current idx:600000
+22:03:03.569 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:03.569222945 current idx:700000
+22:03:05.736 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:05.736236744 current idx:800000
+22:03:07.901 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:07.901558797 current idx:900000
+22:03:10.056 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:03:10.056 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:03:10.056 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:03:10.056 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:03:10.056 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:03:10.056 [main] INFO ru.calculator.CalcDemo -- spend msec:22085, sec:22
+-Xms1024m -Xmx1024m -XX:+UseParallelGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=1342177280 -XX:MaxHeapSize=1342177280 -XX:MinHeapSize=1342177280 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseParallelGC
+22:03:10.226 [main] INFO ru.calculator.CalcDemo -- Current heap size: 1227Mb
+22:03:10.229 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:10.229226039 current idx:0
+22:03:12.610 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:12.610892432 current idx:100000
+22:03:14.871 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:14.871285221 current idx:200000
+22:03:17.120 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:17.120280968 current idx:300000
+22:03:19.337 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:19.337156815 current idx:400000
+22:03:21.514 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:21.514590074 current idx:500000
+22:03:23.674 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:23.674666715 current idx:600000
+22:03:25.930 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:25.930606155 current idx:700000
+22:03:28.070 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:28.070113335 current idx:800000
+22:03:30.380 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:30.380633544 current idx:900000
+22:03:32.575 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:03:32.575 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:03:32.575 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:03:32.575 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:03:32.575 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:03:32.576 [main] INFO ru.calculator.CalcDemo -- spend msec:22346, sec:22
+-Xms1280m -Xmx1280m -XX:+UseParallelGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=1610612736 -XX:MaxHeapSize=1610612736 -XX:MinHeapSize=1610612736 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseParallelGC
+22:03:32.749 [main] INFO ru.calculator.CalcDemo -- Current heap size: 1472Mb
+22:03:32.752 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:32.752415317 current idx:0
+22:03:35.144 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:35.144197466 current idx:100000
+22:03:37.361 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:37.361371543 current idx:200000
+22:03:39.552 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:39.552586452 current idx:300000
+22:03:41.744 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:41.744763694 current idx:400000
+22:03:43.977 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:43.977654601 current idx:500000
+22:03:46.167 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:46.167887453 current idx:600000
+22:03:48.328 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:48.328233484 current idx:700000
+22:03:50.549 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:50.549017705 current idx:800000
+22:03:52.709 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:52.709797061 current idx:900000
+22:03:54.971 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:03:54.971 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:03:54.971 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:03:54.971 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:03:54.971 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:03:54.971 [main] INFO ru.calculator.CalcDemo -- spend msec:22219, sec:22
+-Xms1536m -Xmx1536m -XX:+UseParallelGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=1879048192 -XX:MaxHeapSize=1879048192 -XX:MinHeapSize=1879048192 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseParallelGC
+22:03:55.125 [main] INFO ru.calculator.CalcDemo -- Current heap size: 1717Mb
+22:03:55.128 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:55.128252392 current idx:0
+22:03:57.378 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:57.378297617 current idx:100000
+22:03:59.685 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:03:59.685944244 current idx:200000
+22:04:01.970 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:01.970449073 current idx:300000
+22:04:04.169 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:04.169916705 current idx:400000
+22:04:06.340 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:06.340641676 current idx:500000
+22:04:08.650 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:08.650602080 current idx:600000
+22:04:10.816 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:10.816280756 current idx:700000
+22:04:13.047 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:13.046996317 current idx:800000
+22:04:15.214 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:15.214050632 current idx:900000
+22:04:17.365 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:04:17.366 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:04:17.366 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:04:17.366 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:04:17.366 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:04:17.366 [main] INFO ru.calculator.CalcDemo -- spend msec:22237, sec:22
+-Xms1792m -Xmx1792m -XX:+UseParallelGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=2147483648 -XX:MaxHeapSize=2147483648 -XX:MinHeapSize=2147483648 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseParallelGC
+22:04:17.540 [main] INFO ru.calculator.CalcDemo -- Current heap size: 1963Mb
+22:04:17.542 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:17.542935906 current idx:0
+22:04:19.860 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:19.860056284 current idx:100000
+22:04:22.075 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:22.075124064 current idx:200000
+22:04:24.356 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:24.356904729 current idx:300000
+22:04:26.532 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:26.532703400 current idx:400000
+22:04:28.673 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:28.673404321 current idx:500000
+22:04:30.929 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:30.929176821 current idx:600000
+22:04:33.212 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:33.212710506 current idx:700000
+22:04:35.448 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:35.448526420 current idx:800000
+22:04:37.697 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:37.697875381 current idx:900000
+22:04:39.863 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:04:39.863 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:04:39.863 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:04:39.863 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:04:39.863 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:04:39.863 [main] INFO ru.calculator.CalcDemo -- spend msec:22321, sec:22
+-Xms2048m -Xmx2048m -XX:+UseParallelGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=2415919104 -XX:MaxHeapSize=2415919104 -XX:MinHeapSize=2415919104 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseParallelGC
+22:04:40.046 [main] INFO ru.calculator.CalcDemo -- Current heap size: 2208Mb
+22:04:40.049 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:40.049355526 current idx:0
+22:04:42.959 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:42.959258035 current idx:100000
+22:04:45.795 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:45.795536913 current idx:200000
+22:04:48.592 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:48.592364269 current idx:300000
+22:04:51.406 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:51.406532254 current idx:400000
+22:04:54.209 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:54.209205903 current idx:500000
+22:04:57.104 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:57.104693193 current idx:600000
+22:04:59.916 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:04:59.916071361 current idx:700000
+22:05:02.700 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:02.700564740 current idx:800000
+22:05:05.493 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:05.493333004 current idx:900000
+22:05:08.276 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:05:08.276 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:05:08.276 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:05:08.276 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:05:08.276 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:05:08.276 [main] INFO ru.calculator.CalcDemo -- spend msec:28227, sec:28
+-Xms2304m -Xmx2304m -XX:+UseParallelGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=2684354560 -XX:MaxHeapSize=2684354560 -XX:MinHeapSize=2684354560 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseParallelGC
+22:05:08.459 [main] INFO ru.calculator.CalcDemo -- Current heap size: 2453Mb
+22:05:08.462 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:08.462578324 current idx:0
+22:05:11.305 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:11.305005248 current idx:100000
+22:05:14.123 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:14.123317890 current idx:200000
+22:05:16.962 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:16.962588991 current idx:300000
+22:05:19.773 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:19.773054363 current idx:400000
+22:05:22.621 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:22.621019229 current idx:500000
+22:05:25.507 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:25.507248502 current idx:600000
+22:05:28.302 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:28.302180983 current idx:700000
+22:05:31.076 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:31.076504991 current idx:800000
+22:05:33.885 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:33.885779527 current idx:900000
+22:05:36.661 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:05:36.662 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:05:36.662 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:05:36.662 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:05:36.662 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:05:36.662 [main] INFO ru.calculator.CalcDemo -- spend msec:28199, sec:28
+-Xms2560m -Xmx2560m -XX:+UseParallelGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=2952790016 -XX:MaxHeapSize=2952790016 -XX:MinHeapSize=2952790016 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseParallelGC
+22:05:36.835 [main] INFO ru.calculator.CalcDemo -- Current heap size: 2699Mb
+22:05:36.838 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:36.838696413 current idx:0
+22:05:39.788 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:39.788261532 current idx:100000
+22:05:42.670 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:42.670693487 current idx:200000
+22:05:45.577 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:45.577257743 current idx:300000
+22:05:48.380 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:48.380217814 current idx:400000
+22:05:51.204 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:51.204472705 current idx:500000
+22:05:53.993 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:53.993805991 current idx:600000
+22:05:56.809 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:56.809143353 current idx:700000
+22:05:59.602 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:05:59.602034974 current idx:800000
+22:06:02.375 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:02.375857939 current idx:900000
+22:06:05.168 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:06:05.168 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:06:05.168 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:06:05.168 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:06:05.168 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:06:05.168 [main] INFO ru.calculator.CalcDemo -- spend msec:28330, sec:28
+-Xms2816m -Xmx2816m -XX:+UseParallelGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=3221225472 -XX:MaxHeapSize=3221225472 -XX:MinHeapSize=3221225472 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseParallelGC
+22:06:05.348 [main] INFO ru.calculator.CalcDemo -- Current heap size: 2944Mb
+22:06:05.351 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:05.351668594 current idx:0
+22:06:08.313 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:08.313526050 current idx:100000
+22:06:11.278 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:11.278308468 current idx:200000
+22:06:14.134 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:14.134676043 current idx:300000
+22:06:16.932 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:16.932036900 current idx:400000
+22:06:19.793 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:19.793554865 current idx:500000
+22:06:22.677 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:22.677066909 current idx:600000
+22:06:25.478 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:25.478972107 current idx:700000
+22:06:28.343 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:28.343260627 current idx:800000
+22:06:31.139 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:31.139039549 current idx:900000
+22:06:33.979 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:06:33.980 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:06:33.980 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:06:33.980 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:06:33.980 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:06:33.980 [main] INFO ru.calculator.CalcDemo -- spend msec:28628, sec:28
+-Xms3072m -Xmx3072m -XX:+UseParallelGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=3489660928 -XX:MaxHeapSize=3489660928 -XX:MinHeapSize=3489660928 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseParallelGC
+22:06:34.134 [main] INFO ru.calculator.CalcDemo -- Current heap size: 3189Mb
+22:06:34.136 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:34.136970060 current idx:0
+22:06:37.094 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:37.094737167 current idx:100000
+22:06:39.922 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:39.922701497 current idx:200000
+22:06:42.690 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:42.690327712 current idx:300000
+22:06:45.486 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:45.485996769 current idx:400000
+22:06:48.276 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:48.276425252 current idx:500000
+22:06:51.071 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:51.071163885 current idx:600000
+22:06:53.882 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:53.882861387 current idx:700000
+22:06:56.677 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:56.677927526 current idx:800000
+22:06:59.465 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:06:59.465381876 current idx:900000
+22:07:02.238 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:07:02.238 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:07:02.238 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:07:02.238 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:07:02.238 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:07:02.238 [main] INFO ru.calculator.CalcDemo -- spend msec:28102, sec:28
+-Xms3328m -Xmx3328m -XX:+UseParallelGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=3758096384 -XX:MaxHeapSize=3758096384 -XX:MinHeapSize=3758096384 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseParallelGC
+22:07:02.418 [main] INFO ru.calculator.CalcDemo -- Current heap size: 3435Mb
+22:07:02.421 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:02.421594591 current idx:0
+22:07:05.347 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:05.347042446 current idx:100000
+22:07:08.183 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:08.183266397 current idx:200000
+22:07:10.977 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:10.977487868 current idx:300000
+22:07:13.803 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:13.803061731 current idx:400000
+22:07:16.647 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:16.647226896 current idx:500000
+22:07:19.450 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:19.450730276 current idx:600000
+22:07:22.220 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:22.220054877 current idx:700000
+22:07:24.993 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:24.993888039 current idx:800000
+22:07:27.769 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:27.769717132 current idx:900000
+22:07:30.565 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:07:30.565 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:07:30.565 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:07:30.565 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:07:30.565 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:07:30.565 [main] INFO ru.calculator.CalcDemo -- spend msec:28144, sec:28
+-Xms3584m -Xmx3584m -XX:+UseParallelGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=4026531840 -XX:MaxHeapSize=4026531840 -XX:MinHeapSize=4026531840 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseParallelGC
+22:07:30.732 [main] INFO ru.calculator.CalcDemo -- Current heap size: 3680Mb
+22:07:30.735 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:30.735735200 current idx:0
+22:07:33.688 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:33.688286866 current idx:100000
+22:07:36.570 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:36.570154642 current idx:200000
+22:07:39.499 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:39.499129200 current idx:300000
+22:07:42.299 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:42.299934204 current idx:400000
+22:07:45.174 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:45.174569707 current idx:500000
+22:07:47.983 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:47.983112309 current idx:600000
+22:07:50.800 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:50.800597866 current idx:700000
+22:07:53.573 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:53.573052945 current idx:800000
+22:07:56.371 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:56.371582419 current idx:900000
+22:07:59.198 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:07:59.198 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:07:59.198 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:07:59.198 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:07:59.198 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:07:59.198 [main] INFO ru.calculator.CalcDemo -- spend msec:28463, sec:28
+-Xms3840m -Xmx3840m -XX:+UseParallelGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=4294967296 -XX:MaxHeapSize=4294967296 -XX:MinHeapSize=4294967296 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseParallelGC
+22:07:59.358 [main] INFO ru.calculator.CalcDemo -- Current heap size: 3925Mb
+22:07:59.361 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:07:59.361868207 current idx:0
+22:08:02.336 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:08:02.336435424 current idx:100000
+22:08:05.179 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:08:05.179827503 current idx:200000
+22:08:08.049 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:08:08.049835806 current idx:300000
+22:08:10.931 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:08:10.931765938 current idx:400000
+22:08:13.840 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:08:13.839974260 current idx:500000
+22:08:16.648 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:08:16.648315036 current idx:600000
+22:08:19.421 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:08:19.421373348 current idx:700000
+22:08:22.213 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:08:22.213372701 current idx:800000
+22:08:25.018 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:08:25.018177784 current idx:900000
+22:08:27.808 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:08:27.808 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:08:27.808 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:08:27.808 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:08:27.808 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:08:27.808 [main] INFO ru.calculator.CalcDemo -- spend msec:28447, sec:28
+-Xms4096m -Xmx4096m -XX:+UseParallelGC -XX:+PrintCommandLineFlags
+
+==============================================================================================================
+
+SerialGC:
+
+sergey@Legion5:~/IdeaProjects/2024-06-otus-java-pro-Glavatskih/hw04-gc/bash$ ./test.sh
+-XX:InitialHeapSize=268435456 -XX:MaxHeapSize=268435456 -XX:MinHeapSize=268435456 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseSerialGC
+22:09:41.074 [main] INFO ru.calculator.CalcDemo -- Current heap size: 247Mb
+22:09:41.077 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:09:41.077492382 current idx:0
+22:09:43.297 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:09:43.297195232 current idx:100000
+22:09:45.502 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:09:45.502923497 current idx:200000
+22:09:47.773 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:09:47.773231640 current idx:300000
+22:09:50.011 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:09:50.011358120 current idx:400000
+22:09:52.210 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:09:52.210668927 current idx:500000
+22:09:54.447 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:09:54.447615837 current idx:600000
+22:09:56.695 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:09:56.695057474 current idx:700000
+22:09:59.015 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:09:59.015219668 current idx:800000
+22:10:01.247 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:01.247572254 current idx:900000
+22:10:03.450 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:10:03.451 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:10:03.451 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:10:03.451 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:10:03.451 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:10:03.451 [main] INFO ru.calculator.CalcDemo -- spend msec:22373, sec:22
+-Xms256m -Xmx256m -XX:+UseSerialGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=536870912 -XX:MaxHeapSize=536870912 -XX:MinHeapSize=536870912 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseSerialGC
+22:10:03.622 [main] INFO ru.calculator.CalcDemo -- Current heap size: 494Mb
+22:10:03.625 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:03.625152571 current idx:0
+22:10:05.924 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:05.924147919 current idx:100000
+22:10:08.124 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:08.124836654 current idx:200000
+22:10:10.295 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:10.295738125 current idx:300000
+22:10:12.452 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:12.452564415 current idx:400000
+22:10:14.621 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:14.621447664 current idx:500000
+22:10:16.804 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:16.804298158 current idx:600000
+22:10:19.013 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:19.013045022 current idx:700000
+22:10:21.248 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:21.248884564 current idx:800000
+22:10:23.399 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:23.399547514 current idx:900000
+22:10:25.634 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:10:25.635 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:10:25.635 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:10:25.635 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:10:25.635 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:10:25.635 [main] INFO ru.calculator.CalcDemo -- spend msec:22010, sec:22
+-Xms512m -Xmx512m -XX:+UseSerialGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=805306368 -XX:MaxHeapSize=805306368 -XX:MinHeapSize=805306368 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseSerialGC
+22:10:25.806 [main] INFO ru.calculator.CalcDemo -- Current heap size: 742Mb
+22:10:25.809 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:25.809378111 current idx:0
+22:10:28.078 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:28.078867915 current idx:100000
+22:10:30.303 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:30.303324935 current idx:200000
+22:10:32.539 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:32.539092816 current idx:300000
+22:10:34.722 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:34.722925228 current idx:400000
+22:10:36.883 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:36.883285344 current idx:500000
+22:10:39.071 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:39.071962582 current idx:600000
+22:10:41.228 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:41.228372251 current idx:700000
+22:10:43.405 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:43.405063213 current idx:800000
+22:10:45.572 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:45.572026722 current idx:900000
+22:10:47.729 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:10:47.729 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:10:47.729 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:10:47.729 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:10:47.730 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:10:47.730 [main] INFO ru.calculator.CalcDemo -- spend msec:21920, sec:21
+-Xms768m -Xmx768m -XX:+UseSerialGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=1073741824 -XX:MaxHeapSize=1073741824 -XX:MinHeapSize=1073741824 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseSerialGC
+22:10:47.874 [main] INFO ru.calculator.CalcDemo -- Current heap size: 989Mb
+22:10:47.877 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:47.877819972 current idx:0
+22:10:50.169 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:50.169431157 current idx:100000
+22:10:52.434 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:52.434268684 current idx:200000
+22:10:54.593 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:54.593600522 current idx:300000
+22:10:56.741 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:56.741916567 current idx:400000
+22:10:59.037 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:10:59.037471181 current idx:500000
+22:11:01.207 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:01.207175123 current idx:600000
+22:11:03.377 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:03.376987572 current idx:700000
+22:11:05.576 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:05.576619777 current idx:800000
+22:11:07.737 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:07.737296029 current idx:900000
+22:11:10.006 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:11:10.006 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:11:10.006 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:11:10.006 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:11:10.006 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:11:10.006 [main] INFO ru.calculator.CalcDemo -- spend msec:22129, sec:22
+-Xms1024m -Xmx1024m -XX:+UseSerialGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=1342177280 -XX:MaxHeapSize=1342177280 -XX:MinHeapSize=1342177280 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseSerialGC
+22:11:10.169 [main] INFO ru.calculator.CalcDemo -- Current heap size: 1237Mb
+22:11:10.172 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:10.172664920 current idx:0
+22:11:12.464 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:12.464810551 current idx:100000
+22:11:14.689 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:14.689521566 current idx:200000
+22:11:16.843 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:16.843336306 current idx:300000
+22:11:19.104 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:19.104038423 current idx:400000
+22:11:21.282 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:21.282462977 current idx:500000
+22:11:23.463 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:23.463423498 current idx:600000
+22:11:25.619 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:25.619377308 current idx:700000
+22:11:27.758 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:27.758859378 current idx:800000
+22:11:29.925 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:29.925703127 current idx:900000
+22:11:32.088 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:11:32.088 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:11:32.089 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:11:32.089 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:11:32.089 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:11:32.089 [main] INFO ru.calculator.CalcDemo -- spend msec:21916, sec:21
+-Xms1280m -Xmx1280m -XX:+UseSerialGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=1610612736 -XX:MaxHeapSize=1610612736 -XX:MinHeapSize=1610612736 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseSerialGC
+22:11:32.253 [main] INFO ru.calculator.CalcDemo -- Current heap size: 1484Mb
+22:11:32.256 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:32.256602448 current idx:0
+22:11:34.524 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:34.524644866 current idx:100000
+22:11:36.755 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:36.755471732 current idx:200000
+22:11:38.930 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:38.930553154 current idx:300000
+22:11:41.171 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:41.170987288 current idx:400000
+22:11:43.355 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:43.355373142 current idx:500000
+22:11:45.536 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:45.536939585 current idx:600000
+22:11:47.708 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:47.708167872 current idx:700000
+22:11:49.874 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:49.874528152 current idx:800000
+22:11:52.090 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:52.090590457 current idx:900000
+22:11:54.247 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:11:54.247 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:11:54.247 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:11:54.247 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:11:54.247 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:11:54.247 [main] INFO ru.calculator.CalcDemo -- spend msec:21991, sec:21
+-Xms1536m -Xmx1536m -XX:+UseSerialGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=1879048192 -XX:MaxHeapSize=1879048192 -XX:MinHeapSize=1879048192 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseSerialGC
+22:11:54.423 [main] INFO ru.calculator.CalcDemo -- Current heap size: 1732Mb
+22:11:54.426 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:54.426453894 current idx:0
+22:11:56.707 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:56.707936452 current idx:100000
+22:11:58.915 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:11:58.915931398 current idx:200000
+22:12:01.099 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:01.099439788 current idx:300000
+22:12:03.265 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:03.265270419 current idx:400000
+22:12:05.421 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:05.420975468 current idx:500000
+22:12:07.599 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:07.599595566 current idx:600000
+22:12:09.758 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:09.758835926 current idx:700000
+22:12:11.942 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:11.942597116 current idx:800000
+22:12:14.134 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:14.134005965 current idx:900000
+22:12:16.353 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:12:16.354 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:12:16.354 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:12:16.354 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:12:16.354 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:12:16.354 [main] INFO ru.calculator.CalcDemo -- spend msec:21927, sec:21
+-Xms1792m -Xmx1792m -XX:+UseSerialGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=2147483648 -XX:MaxHeapSize=2147483648 -XX:MinHeapSize=2147483648 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseSerialGC
+22:12:16.506 [main] INFO ru.calculator.CalcDemo -- Current heap size: 1979Mb
+22:12:16.508 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:16.508928660 current idx:0
+22:12:18.830 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:18.830738382 current idx:100000
+22:12:21.056 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:21.056841660 current idx:200000
+22:12:23.214 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:23.214870950 current idx:300000
+22:12:25.397 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:25.397860153 current idx:400000
+22:12:27.597 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:27.597808013 current idx:500000
+22:12:29.751 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:29.751199637 current idx:600000
+22:12:31.938 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:31.937982928 current idx:700000
+22:12:34.091 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:34.091029537 current idx:800000
+22:12:36.353 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:36.353522372 current idx:900000
+22:12:38.551 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:12:38.551 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:12:38.551 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:12:38.551 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:12:38.551 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:12:38.551 [main] INFO ru.calculator.CalcDemo -- spend msec:22043, sec:22
+-Xms2048m -Xmx2048m -XX:+UseSerialGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=2415919104 -XX:MaxHeapSize=2415919104 -XX:MinHeapSize=2415919104 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseSerialGC
+22:12:38.733 [main] INFO ru.calculator.CalcDemo -- Current heap size: 2227Mb
+22:12:38.736 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:38.736479250 current idx:0
+22:12:41.624 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:41.624613766 current idx:100000
+22:12:44.464 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:44.464435153 current idx:200000
+22:12:47.249 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:47.249652563 current idx:300000
+22:12:50.086 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:50.086203627 current idx:400000
+22:12:53.031 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:53.031446928 current idx:500000
+22:12:55.874 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:55.874665418 current idx:600000
+22:12:58.655 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:12:58.655940115 current idx:700000
+22:13:01.470 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:01.470912168 current idx:800000
+22:13:04.261 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:04.261875925 current idx:900000
+22:13:07.067 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:13:07.067 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:13:07.067 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:13:07.067 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:13:07.067 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:13:07.067 [main] INFO ru.calculator.CalcDemo -- spend msec:28330, sec:28
+-Xms2304m -Xmx2304m -XX:+UseSerialGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=2684354560 -XX:MaxHeapSize=2684354560 -XX:MinHeapSize=2684354560 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseSerialGC
+22:13:07.240 [main] INFO ru.calculator.CalcDemo -- Current heap size: 2474Mb
+22:13:07.243 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:07.243373761 current idx:0
+22:13:10.214 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:10.214691070 current idx:100000
+22:13:13.095 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:13.095622511 current idx:200000
+22:13:15.974 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:15.974659929 current idx:300000
+22:13:18.794 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:18.794448503 current idx:400000
+22:13:21.665 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:21.665545717 current idx:500000
+22:13:24.593 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:24.593207415 current idx:600000
+22:13:27.422 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:27.422302650 current idx:700000
+22:13:30.241 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:30.241507101 current idx:800000
+22:13:33.111 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:33.111173437 current idx:900000
+22:13:35.985 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:13:35.985 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:13:35.985 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:13:35.985 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:13:35.985 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:13:35.985 [main] INFO ru.calculator.CalcDemo -- spend msec:28742, sec:28
+-Xms2560m -Xmx2560m -XX:+UseSerialGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=2952790016 -XX:MaxHeapSize=2952790016 -XX:MinHeapSize=2952790016 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseSerialGC
+22:13:36.133 [main] INFO ru.calculator.CalcDemo -- Current heap size: 2722Mb
+22:13:36.136 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:36.136667501 current idx:0
+22:13:39.003 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:39.003782985 current idx:100000
+22:13:41.914 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:41.914456683 current idx:200000
+22:13:44.770 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:44.770571751 current idx:300000
+22:13:47.578 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:47.578387869 current idx:400000
+22:13:50.351 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:50.351730677 current idx:500000
+22:13:53.161 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:53.161657687 current idx:600000
+22:13:56.047 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:56.047340272 current idx:700000
+22:13:58.888 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:13:58.888670727 current idx:800000
+22:14:01.696 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:01.696699459 current idx:900000
+22:14:04.538 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:14:04.538 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:14:04.538 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:14:04.538 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:14:04.538 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:14:04.538 [main] INFO ru.calculator.CalcDemo -- spend msec:28402, sec:28
+-Xms2816m -Xmx2816m -XX:+UseSerialGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=3221225472 -XX:MaxHeapSize=3221225472 -XX:MinHeapSize=3221225472 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseSerialGC
+22:14:04.679 [main] INFO ru.calculator.CalcDemo -- Current heap size: 2969Mb
+22:14:04.682 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:04.682429623 current idx:0
+22:14:07.568 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:07.568247841 current idx:100000
+22:14:10.378 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:10.378714001 current idx:200000
+22:14:13.164 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:13.164152857 current idx:300000
+22:14:15.939 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:15.939206588 current idx:400000
+22:14:18.736 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:18.736244516 current idx:500000
+22:14:21.517 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:21.517187755 current idx:600000
+22:14:24.331 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:24.331711452 current idx:700000
+22:14:27.119 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:27.119509723 current idx:800000
+22:14:29.913 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:29.912993194 current idx:900000
+22:14:32.748 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:14:32.748 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:14:32.748 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:14:32.748 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:14:32.748 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:14:32.748 [main] INFO ru.calculator.CalcDemo -- spend msec:28066, sec:28
+-Xms3072m -Xmx3072m -XX:+UseSerialGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=3489660928 -XX:MaxHeapSize=3489660928 -XX:MinHeapSize=3489660928 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseSerialGC
+22:14:32.922 [main] INFO ru.calculator.CalcDemo -- Current heap size: 3217Mb
+22:14:32.925 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:32.925748716 current idx:0
+22:14:35.870 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:35.870785929 current idx:100000
+22:14:38.674 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:38.674637442 current idx:200000
+22:14:41.527 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:41.527222148 current idx:300000
+22:14:44.329 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:44.329862161 current idx:400000
+22:14:47.119 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:47.119092713 current idx:500000
+22:14:49.958 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:49.958163317 current idx:600000
+22:14:52.732 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:52.732970588 current idx:700000
+22:14:55.512 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:55.512457581 current idx:800000
+22:14:58.283 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:14:58.283326566 current idx:900000
+22:15:01.066 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:15:01.066 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:15:01.066 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:15:01.066 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:15:01.066 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:15:01.066 [main] INFO ru.calculator.CalcDemo -- spend msec:28141, sec:28
+-Xms3328m -Xmx3328m -XX:+UseSerialGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=3758096384 -XX:MaxHeapSize=3758096384 -XX:MinHeapSize=3758096384 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseSerialGC
+22:15:01.247 [main] INFO ru.calculator.CalcDemo -- Current heap size: 3464Mb
+22:15:01.250 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:01.250261128 current idx:0
+22:15:04.107 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:04.107111356 current idx:100000
+22:15:06.958 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:06.958117707 current idx:200000
+22:15:09.748 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:09.748326457 current idx:300000
+22:15:12.533 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:12.532983456 current idx:400000
+22:15:15.296 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:15.296373425 current idx:500000
+22:15:18.068 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:18.068004020 current idx:600000
+22:15:20.846 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:20.846370088 current idx:700000
+22:15:23.677 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:23.677693401 current idx:800000
+22:15:26.454 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:26.454752105 current idx:900000
+22:15:29.282 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:15:29.282 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:15:29.282 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:15:29.282 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:15:29.282 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:15:29.282 [main] INFO ru.calculator.CalcDemo -- spend msec:28032, sec:28
+-Xms3584m -Xmx3584m -XX:+UseSerialGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=4026531840 -XX:MaxHeapSize=4026531840 -XX:MinHeapSize=4026531840 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseSerialGC
+22:15:29.425 [main] INFO ru.calculator.CalcDemo -- Current heap size: 3712Mb
+22:15:29.428 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:29.428539655 current idx:0
+22:15:32.359 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:32.359064704 current idx:100000
+22:15:35.200 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:35.200197541 current idx:200000
+22:15:38.069 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:38.069201721 current idx:300000
+22:15:40.865 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:40.865813477 current idx:400000
+22:15:43.731 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:43.731227580 current idx:500000
+22:15:46.557 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:46.557701323 current idx:600000
+22:15:49.444 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:49.444466025 current idx:700000
+22:15:52.280 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:52.280788234 current idx:800000
+22:15:55.087 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:55.087098726 current idx:900000
+22:15:57.920 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:15:57.920 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:15:57.920 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:15:57.920 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:15:57.920 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:15:57.921 [main] INFO ru.calculator.CalcDemo -- spend msec:28492, sec:28
+-Xms3840m -Xmx3840m -XX:+UseSerialGC -XX:+PrintCommandLineFlags
+
+-XX:InitialHeapSize=4294967296 -XX:MaxHeapSize=4294967296 -XX:MinHeapSize=4294967296 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:-THPStackMitigation -XX:+UseCompressedOops -XX:+UseSerialGC
+22:15:58.093 [main] INFO ru.calculator.CalcDemo -- Current heap size: 3959Mb
+22:15:58.096 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:15:58.096029917 current idx:0
+22:16:01.051 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:16:01.051674403 current idx:100000
+22:16:03.872 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:16:03.872568887 current idx:200000
+22:16:06.643 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:16:06.643457777 current idx:300000
+22:16:09.439 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:16:09.439866262 current idx:400000
+22:16:12.220 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:16:12.220202978 current idx:500000
+22:16:15.043 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:16:15.043574434 current idx:600000
+22:16:17.866 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:16:17.866772761 current idx:700000
+22:16:20.678 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:16:20.678868323 current idx:800000
+22:16:23.488 [main] INFO ru.calculator.CalcDemo -- 2024-08-03T22:16:23.488070453 current idx:900000
+22:16:26.276 [main] INFO ru.calculator.CalcDemo -- PrevValue:999999
+22:16:26.276 [main] INFO ru.calculator.CalcDemo -- PrevPrevValue:999998
+22:16:26.276 [main] INFO ru.calculator.CalcDemo -- SumLastThreeValues:2999994
+22:16:26.276 [main] INFO ru.calculator.CalcDemo -- SomeValue:93663836
+22:16:26.276 [main] INFO ru.calculator.CalcDemo -- Sum:1783293664
+22:16:26.276 [main] INFO ru.calculator.CalcDemo -- spend msec:28181, sec:28
+-Xms4096m -Xmx4096m -XX:+UseSerialGC -XX:+PrintCommandLineFlags
+
+sergey@Legion5:~/IdeaProjects/2024-06-otus-java-pro-Glavatskih/hw04-gc/bash$

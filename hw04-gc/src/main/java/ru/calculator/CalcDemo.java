@@ -13,13 +13,14 @@ import java.time.LocalDateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@SuppressWarnings("java:S125")
 public class CalcDemo {
     private static final Logger log = LoggerFactory.getLogger(CalcDemo.class);
 
     public static void main(String[] args) {
-        long counter = 100_000;
+        long counter = 2_000_000;
         var summator = new Summator();
-        log.info("Current heap size: {}Mb", Runtime.getRuntime().totalMemory()/(1024*1024));
+        log.info("Current heap size: {}Mb", Runtime.getRuntime().totalMemory() / (1024 * 1024));
         long startTime = System.currentTimeMillis();
 
         for (var idx = 0; idx < counter; idx++) {
