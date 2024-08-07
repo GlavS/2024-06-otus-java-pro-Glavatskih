@@ -1,3 +1,0 @@
-[2024-08-04T21:42:47.241+0300][0.003s][info][gc] Using Parallel
-[2024-08-04T21:42:48.059+0300][0,820s][info][gc] GC(0) Pause Young (Allocation Failure) 641M->129M(2453M) 151,562ms
-[2024-08-04T21:42:48.549+0300][1,310s][info][gc] GC(1) Pause Young (Allocation Failure) 769M->79M(2453M) 77,778ms
