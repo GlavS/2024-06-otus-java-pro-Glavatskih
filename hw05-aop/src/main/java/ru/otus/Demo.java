@@ -20,6 +20,6 @@ public class Demo {
                 (SecureInterface) AopLogger.addLogging(new SecureInterfaceImpl(), SecureInterface.class);
         securePrint.securePrint("Secure info");
         securePrint.insecurePrint("Hello, world!");
-        securePrint.insecurePrint("Good-by, world!", 2);
+        securePrint.insecurePrint("Goodbye, world!", 2);
     }
 }
