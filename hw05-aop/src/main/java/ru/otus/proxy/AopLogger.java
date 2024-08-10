@@ -4,17 +4,21 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 import lombok.extern.slf4j.Slf4j;
 import ru.otus.annotation.Log;
 
 @Slf4j
 public class AopLogger<T> implements InvocationHandler {
     private final T target;
-    private final Method[] targetMethods;
+    private final List<Method> logAnnotatedMethods;
 
     public AopLogger(T target) {
         this.target = target;
-        targetMethods = target.getClass().getDeclaredMethods();
+        logAnnotatedMethods = Arrays.stream(target.getClass().getDeclaredMethods())
+                .filter(m -> m.isAnnotationPresent(Log.class))
+                .collect(Collectors.toList());
     }
 
     public static <T> Object addLogging(T target, Class<? super T> interfaceT) {
@@ -24,7 +28,7 @@ public class AopLogger<T> implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        Arrays.stream(targetMethods)
+        logAnnotatedMethods.stream()
                 .filter(m -> m.isAnnotationPresent(Log.class))
                 .filter(m -> m.getName().equals(method.getName()))
                 .filter(m -> argsAreIdentical(m.getParameterTypes(), method.getParameterTypes()))

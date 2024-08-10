@@ -8,7 +8,6 @@ import ru.otus.testclasses.TestLoggingInterface;
 
 public class Demo {
 
-    @SuppressWarnings("java:S106")
     public static void main(String[] args) {
 
         TestLoggingInterface testLog =
@@ -16,8 +15,6 @@ public class Demo {
         testLog.calculate("Calculus test!");
         testLog.calculate(42, "Question");
         testLog.calculate(1, 2, "Three");
-
-        System.out.println();
 
         SecureInterface securePrint =
                 (SecureInterface) AopLogger.addLogging(new SecureInterfaceImpl(), SecureInterface.class);
