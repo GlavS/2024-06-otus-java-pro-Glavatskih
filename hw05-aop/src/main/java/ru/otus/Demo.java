@@ -1,10 +1,10 @@
 package ru.otus;
 
 import ru.otus.proxy.AopLogger;
-import ru.otus.testclasses.SecureInterface;
-import ru.otus.testclasses.SecureInterfaceImpl;
-import ru.otus.testclasses.TestLogging;
-import ru.otus.testclasses.TestLoggingInterface;
+import ru.otus.classes.SecureInterface;
+import ru.otus.classes.SecureInterfaceImpl;
+import ru.otus.classes.TestLogging;
+import ru.otus.classes.TestLoggingInterface;
 
 public class Demo {
 

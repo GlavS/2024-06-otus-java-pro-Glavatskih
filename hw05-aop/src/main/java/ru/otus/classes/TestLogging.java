@@ -1,4 +1,4 @@
-package ru.otus.testclasses;
+package ru.otus.classes;
 
 import lombok.extern.slf4j.Slf4j;
 import ru.otus.annotation.Log;

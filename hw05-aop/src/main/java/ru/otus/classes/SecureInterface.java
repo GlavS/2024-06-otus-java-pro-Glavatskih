@@ -1,4 +1,4 @@
-package ru.otus.testclasses;
+package ru.otus.classes;
 
 public interface SecureInterface {
     void securePrint(String info);
