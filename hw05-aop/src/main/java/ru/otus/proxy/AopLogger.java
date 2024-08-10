@@ -5,7 +5,6 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 import lombok.extern.slf4j.Slf4j;
 import ru.otus.annotation.Log;
 
@@ -18,7 +17,7 @@ public class AopLogger<T> implements InvocationHandler {
         this.target = target;
         logAnnotatedMethods = Arrays.stream(target.getClass().getDeclaredMethods())
                 .filter(m -> m.isAnnotationPresent(Log.class))
-                .collect(Collectors.toList());
+                .toList();
     }
 
     public static <T> Object addLogging(T target, Class<? super T> interfaceT) {
