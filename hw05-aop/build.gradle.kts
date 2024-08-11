@@ -5,7 +5,7 @@ plugins {
 }
 
 application{
-    mainClass="ru.otus.Main"
+    mainClass="ru.otus.Demo"
 }
 
 group = "ru.otus"

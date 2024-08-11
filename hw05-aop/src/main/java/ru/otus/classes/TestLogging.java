@@ -12,12 +12,12 @@ public class TestLogging implements TestLoggingInterface {
     }
 
     @Override
+    @Log
     public void calculate(int first, String info) {
         log.info("Calculation {}, one parameter: {}", info, first);
     }
 
     @Override
-    @Log
     public void calculate(int first, int second, String info) {
         log.info("Calculation {}, two parameters: {} and {}", info, first, second);
     }
