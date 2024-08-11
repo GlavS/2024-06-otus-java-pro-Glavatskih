@@ -12,11 +12,11 @@ import lombok.extern.slf4j.Slf4j;
 import ru.otus.annotation.Log;
 
 @Slf4j
-public class AopLogger<T, I> implements InvocationHandler {
+public class AopLogger<T> implements InvocationHandler {
     private final T target;
     private final Set<Method> logAnnotatedMethods;
 
-    public AopLogger(T target, Class<I> targetInterfaceClass) {
+    public AopLogger(T target, Class<? super T> targetInterfaceClass) {
         this.target = target;
         logAnnotatedMethods = Arrays.stream(target.getClass().getDeclaredMethods())
                 .filter(m -> m.isAnnotationPresent(Log.class))
