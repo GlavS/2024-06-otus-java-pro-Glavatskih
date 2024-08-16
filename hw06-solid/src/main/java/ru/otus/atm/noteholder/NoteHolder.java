@@ -1,9 +1,8 @@
 package ru.otus.atm.noteholder;
 
-import ru.otus.banknote.Banknote;
-
 import java.util.Optional;
 import java.util.Set;
+import ru.otus.banknote.Banknote;
 
 public interface NoteHolder {
     void addToCell(Banknote banknote);

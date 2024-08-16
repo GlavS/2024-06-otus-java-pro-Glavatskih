@@ -9,7 +9,8 @@ public final class RoubleBanknoteHolder implements NoteHolder {
 
     private final Map<Integer, Deque<Banknote>> cells = new HashMap<>();
     private static final Set<Integer> AMOUNTS_ALLOWED;
-    static{
+
+    static {
         AMOUNTS_ALLOWED = new TreeSet<>(Comparator.reverseOrder());
         AMOUNTS_ALLOWED.add(100);
         AMOUNTS_ALLOWED.add(200);
@@ -34,8 +35,10 @@ public final class RoubleBanknoteHolder implements NoteHolder {
 
     @Override
     public Optional<Banknote> getFromCell(int nominal) {
-//        return Optional.ofNullable(cells.get(nominal).pop());
-        return cells.get(nominal) == null ? Optional.empty() : Optional.of(cells.get(nominal).pop());
+        //        return Optional.ofNullable(cells.get(nominal).pop());
+        return cells.get(nominal) == null
+                ? Optional.empty()
+                : Optional.of(cells.get(nominal).pop());
     }
 
     @Override

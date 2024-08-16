@@ -7,6 +7,7 @@ public final class Roubles500 implements Banknote, Rouble {
     public int value() {
         return 500;
     }
+
     @Override
     public String toString() {
         return "Roubles 500";
