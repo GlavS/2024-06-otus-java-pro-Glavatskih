@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import ru.otus.atm.Atm;
 import ru.otus.atm.AtmService;
-import ru.otus.atm.dispenser.AmountConverter;
-import ru.otus.atm.dispenser.AmountConverterImpl;
-import ru.otus.atm.dispenser.Processor;
-import ru.otus.atm.dispenser.ProcessorImpl;
+import ru.otus.atm.processor.AmountConverter;
+import ru.otus.atm.processor.AmountConverterImpl;
+import ru.otus.atm.processor.Processor;
+import ru.otus.atm.processor.ProcessorImpl;
 import ru.otus.atm.noteholder.NoteHolder;
 import ru.otus.atm.noteholder.rf.RoubleBanknoteHolder;
 import ru.otus.banknote.Banknote;
@@ -32,7 +32,7 @@ public class Main {
 
         System.out.println(bankomat.balance());
 
-        List<Banknote> dispense = bankomat.dispense(1000);
+        List<Banknote> dispense = bankomat.dispense(200);
         System.out.println(dispense);
     }
 }

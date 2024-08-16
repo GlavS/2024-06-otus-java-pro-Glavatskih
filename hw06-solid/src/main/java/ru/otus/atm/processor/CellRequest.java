@@ -1,3 +1,3 @@
-package ru.otus.atm.dispenser;
+package ru.otus.atm.processor;
 
 public record CellRequest(int nominal, int amount) {}

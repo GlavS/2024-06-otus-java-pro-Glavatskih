@@ -1,7 +1,7 @@
 package ru.otus.atm;
 
 import java.util.List;
-import ru.otus.atm.dispenser.Processor;
+import ru.otus.atm.processor.Processor;
 import ru.otus.atm.noteholder.BanknoteHolderException;
 import ru.otus.banknote.Banknote;
 

@@ -1,4 +1,4 @@
-package ru.otus.atm.dispenser;
+package ru.otus.atm.processor;
 
 import java.util.List;
 
