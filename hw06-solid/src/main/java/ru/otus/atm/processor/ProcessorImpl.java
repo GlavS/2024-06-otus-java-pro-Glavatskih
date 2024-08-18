@@ -18,10 +18,10 @@ public class ProcessorImpl implements Processor {
 
     @Override
     public List<Banknote> dispenseNotes(int amount) {
-        var requestList = amountConverter.calculate(amount);
+        var requestBanknotesList = amountConverter.calculate(amount);
         List<Banknote> result = new ArrayList<>();
-        for (CellRequest request : requestList) {
-            int quantity = request.amount();
+        for (CellRequest request : requestBanknotesList) {
+            int quantity = request.quantity();
             for (int i = 0; i < quantity; i++) {
                 Optional<Banknote> banknote = noteHolder.getFromCell(request.nominal());
                 result.add(banknote.orElseThrow(() -> new BanknoteHolderException("Cannot find banknote to dispense")));

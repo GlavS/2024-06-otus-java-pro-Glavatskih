@@ -11,5 +11,7 @@ public interface NoteHolder {
 
     int totalValue();
 
+    int cellBanknoteCount(int nominal);
+
     Set<Integer> getAllowedAmounts();
 }

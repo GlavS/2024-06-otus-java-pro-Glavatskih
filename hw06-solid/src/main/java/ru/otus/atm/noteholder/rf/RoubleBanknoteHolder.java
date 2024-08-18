@@ -1,6 +1,7 @@
 package ru.otus.atm.noteholder.rf;
 
 import java.util.*;
+import ru.otus.atm.noteholder.BanknoteHolderException;
 import ru.otus.atm.noteholder.NoteHolder;
 import ru.otus.banknote.Banknote;
 import ru.otus.banknote.rf.Rouble;
@@ -23,7 +24,7 @@ public final class RoubleBanknoteHolder implements NoteHolder {
     @Override
     public void addToCell(Banknote banknote) {
         if (!(banknote instanceof Rouble)) {
-            throw new WrongCurrencyException("Wrong banknote country");
+            throw new BanknoteHolderException("Wrong banknote country");
         }
         Deque<Banknote> init = new ArrayDeque<>();
         init.push(banknote);
@@ -35,17 +36,21 @@ public final class RoubleBanknoteHolder implements NoteHolder {
 
     @Override
     public Optional<Banknote> getFromCell(int nominal) {
-        //        return Optional.ofNullable(cells.get(nominal).pop());
-        return cells.get(nominal) == null
-                ? Optional.empty()
-                : Optional.of(cells.get(nominal).pop());
+        var deque = cells.get(nominal);
+        return (deque == null || deque.isEmpty()) ? Optional.empty() : Optional.of(deque.pop());
+    }
+
+    @Override
+    public int cellBanknoteCount(int nominal) {
+        return cells.get(nominal).size();
     }
 
     @Override
     public int totalValue() {
-        return cells.entrySet().stream()
-                .map(entry -> entry.getKey() * entry.getValue().size())
-                .reduce(0, Integer::sum);
+        return cells.keySet().stream()
+                .map(nominal -> nominal * cellBanknoteCount(nominal))
+                .reduce(Integer::sum)
+                .orElse(0);
     }
 
     @Override

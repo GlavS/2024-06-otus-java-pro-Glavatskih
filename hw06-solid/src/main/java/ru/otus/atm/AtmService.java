@@ -1,8 +1,8 @@
 package ru.otus.atm;
 
 import java.util.List;
-import ru.otus.atm.processor.Processor;
 import ru.otus.atm.noteholder.BanknoteHolderException;
+import ru.otus.atm.processor.Processor;
 import ru.otus.banknote.Banknote;
 
 public class AtmService implements Atm {
@@ -23,7 +23,7 @@ public class AtmService implements Atm {
         try {
             return processor.dispenseNotes(amount);
         } catch (BanknoteHolderException e) {
-            throw new AtmException("Requested amount cannot be dispensed", e);
+            throw new AtmException("Requested quantity cannot be dispensed", e);
         }
     }
 
