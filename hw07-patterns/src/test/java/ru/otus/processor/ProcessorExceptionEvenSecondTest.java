@@ -14,6 +14,7 @@ import ru.otus.model.Message;
 import ru.otus.processor.homework.EvenSecondException;
 import ru.otus.processor.homework.ProcessorExceptionEvenSecond;
 
+@SuppressWarnings("java:S2925")
 class ProcessorExceptionEvenSecondTest {
     private static final int TEST_RUNS = 12;
     private static final int RUNS_WITH_EXCEPTION = TEST_RUNS / 2;

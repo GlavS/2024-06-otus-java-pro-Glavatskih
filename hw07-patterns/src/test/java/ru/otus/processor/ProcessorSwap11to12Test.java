@@ -8,7 +8,7 @@ import ru.otus.processor.homework.ProcessorSwap11to12;
 
 class ProcessorSwap11to12Test {
     @Test
-    public void swapTest() {
+    void swapTest() {
         ProcessorSwap11to12 processorSwap11to12 = new ProcessorSwap11to12();
         Message message =
                 new Message.Builder(1L).field11("Field11").field12("Field12").build();
