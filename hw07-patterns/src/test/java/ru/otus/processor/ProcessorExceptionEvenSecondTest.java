@@ -11,6 +11,8 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.otus.model.Message;
+import ru.otus.processor.homework.EvenSecondException;
+import ru.otus.processor.homework.ProcessorExceptionEvenSecond;
 
 class ProcessorExceptionEvenSecondTest {
     private static final int TEST_RUNS = 12;

@@ -1,6 +1,7 @@
-package ru.otus.processor;
+package ru.otus.processor.homework;
 
 import ru.otus.model.Message;
+import ru.otus.processor.Processor;
 
 public class ProcessorSwap11to12 implements Processor {
     @Override

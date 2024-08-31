@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 import ru.otus.model.Message;
+import ru.otus.processor.homework.ProcessorSwap11to12;
 
 class ProcessorSwap11to12Test {
     @Test

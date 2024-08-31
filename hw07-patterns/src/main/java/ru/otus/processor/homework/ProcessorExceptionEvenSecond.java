@@ -1,7 +1,8 @@
-package ru.otus.processor;
+package ru.otus.processor.homework;
 
 import java.time.LocalDateTime;
 import ru.otus.model.Message;
+import ru.otus.processor.Processor;
 
 public class ProcessorExceptionEvenSecond implements Processor {
     @Override
