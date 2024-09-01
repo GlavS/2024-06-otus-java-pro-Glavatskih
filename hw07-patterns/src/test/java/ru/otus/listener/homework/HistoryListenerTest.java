@@ -2,6 +2,7 @@ package ru.otus.listener.homework;
 
 import static org.assertj.core.api.Assertions.*;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
 import ru.otus.model.Message;
@@ -12,7 +13,7 @@ class HistoryListenerTest {
     @Test
     void listenerTest() {
         // given
-        var historyListener = new HistoryListener();
+        var historyListener = new HistoryListener(LocalDateTime::now);
 
         var id = 100L;
         var data = "33";
@@ -37,10 +38,12 @@ class HistoryListenerTest {
 
     @Test
     void listenerShouldNotThrowNPEIfField13IsNull() {
-        var historyListener = new HistoryListener();
-
+        // given
+        var historyListener = new HistoryListener(LocalDateTime::now);
+        // when
         var id = 10L;
         var message = new Message.Builder(id).build();
+        // then
         assertThatNoException().isThrownBy(() -> historyListener.onUpdated(message));
     }
 }
