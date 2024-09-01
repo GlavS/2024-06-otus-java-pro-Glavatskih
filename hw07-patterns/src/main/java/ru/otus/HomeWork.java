@@ -36,14 +36,14 @@ public class HomeWork {
           по аналогии с Demo.class
           из элеменов "to do" создать new ComplexProcessor и обработать сообщение
         */
-        var processorList = List.of(new ProcessorSwap11to12(), new ProcessorExceptionEvenSecond());
+        var processorList = List.of(new ProcessorSwap11to12(), new ProcessorExceptionEvenSecond(LocalDateTime::now));
         Consumer<Exception> exceptionHandler = exception -> {
             if (exception instanceof EvenSecondException) {
                 logger.error("EvenSecondException happened", exception);
             }
         };
         var mainProcessor = new ComplexProcessor(processorList, exceptionHandler);
-        var historyListener = new HistoryListener();
+        var historyListener = new HistoryListener(LocalDateTime::now);
         mainProcessor.addListener(historyListener);
         ObjectForMessage ofm = new ObjectForMessage();
         ofm.setData(List.of("Hello World", "Goodbye World", "42"));
