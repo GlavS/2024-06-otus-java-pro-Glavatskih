@@ -1,95 +1,49 @@
 package ru.otus.processor;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThatNoException;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.concurrent.TimeUnit;
+import java.time.LocalTime;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.mockito.Mockito;
 import ru.otus.model.Message;
 import ru.otus.processor.homework.EvenSecondException;
 import ru.otus.processor.homework.ProcessorExceptionEvenSecond;
+import ru.otus.timeprovider.TimeProvider;
 
-@SuppressWarnings("java:S2925")
 class ProcessorExceptionEvenSecondTest {
-    private static final int TEST_RUNS = 12;
-    private static final int RUNS_WITH_EXCEPTION = TEST_RUNS / 2;
-    private static final int RUNS_WITH_NO_EXCEPTION = TEST_RUNS / 2;
 
-    Logger logger = LoggerFactory.getLogger(ProcessorExceptionEvenSecondTest.class);
+    private final TimeProvider timeProviderMock = Mockito.mock(TimeProvider.class);
+    private final ProcessorExceptionEvenSecond processor = new ProcessorExceptionEvenSecond(timeProviderMock);
+    private final Message emptyMsg = new Message.Builder(1L).build();
+    private final LocalDate date = LocalDate.MIN;
 
     @Test
     @DisplayName("Процессор должен бросать заданный тип исключения")
     void processorShouldThrowCorrectException() {
-        // given
-        Exception exception = null;
-        ProcessorExceptionEvenSecond processor = new ProcessorExceptionEvenSecond();
-        Message emptyMsg = new Message.Builder(1L).build();
         // when
-        while (exception == null) {
-            waitOneSecond();
-            try {
-                processor.process(emptyMsg);
-            } catch (EvenSecondException e) {
-                exception = e;
-            }
-        }
+        Mockito.when(timeProviderMock.getTime()).thenReturn(LocalDateTime.of(date, LocalTime.of(1, 1, 2)));
         // then
-        assertThat(exception).isInstanceOf(EvenSecondException.class);
+        assertThatThrownBy(() -> processor.process(emptyMsg)).isInstanceOf(EvenSecondException.class);
     }
 
     @Test
-    @DisplayName("Процессор должен бросать исключение только будучи вызванным в четную секунду")
+    @DisplayName("Процессор должен бросать заданное исключение только будучи вызванным в четную секунду")
     void processorShouldThrowExceptionIfCalledOnEvenSecond() {
-        // given
-        Deque<ExceptionLog> exceptionLog = new ArrayDeque<>();
-        ProcessorExceptionEvenSecond processor = new ProcessorExceptionEvenSecond();
-        Message emptyMsg = new Message.Builder(1L).build();
-        // when
-        logger.info("Starting test, wait for 12 sec...");
-        while (exceptionLog.size() < TEST_RUNS) {
-            waitOneSecond();
-            try {
-                processor.process(emptyMsg);
-                exceptionLog.push(new ExceptionLog(LocalDateTime.now().getSecond(), false));
-            } catch (EvenSecondException e) {
-                exceptionLog.push(new ExceptionLog(LocalDateTime.now().getSecond(), true));
-            }
-            logger.info("Processor invocation {}", exceptionLog.size());
+        for (int i = 0; i < 60; i += 2) {
+            // when
+            Mockito.when(timeProviderMock.getTime()).thenReturn(LocalDateTime.of(date, LocalTime.of(1, 1, i)));
+            // then
+            assertThatThrownBy(() -> processor.process(emptyMsg)).isInstanceOf(EvenSecondException.class);
         }
-        logger.info("Done.");
-        // then
-        long exceptionsExpected = exceptionLog.stream()
-                .filter(el -> isEven(el.second()))
-                .filter(ExceptionLog::exceptionWasThrown)
-                .count();
-        long runsWithNoExceptions = exceptionLog.stream()
-                .filter(el -> isOdd(el.second()))
-                .filter(el -> !el.exceptionWasThrown())
-                .count();
-        assertThat(exceptionsExpected).isEqualTo(RUNS_WITH_EXCEPTION);
-        assertThat(runsWithNoExceptions).isEqualTo(RUNS_WITH_NO_EXCEPTION);
-    }
-
-    private static void waitOneSecond() {
-        try {
-            TimeUnit.SECONDS.sleep(1L);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
+        for (int i = 1; i < 60; i += 2) {
+            // when
+            Mockito.when(timeProviderMock.getTime()).thenReturn(LocalDateTime.of(date, LocalTime.of(1, 1, i)));
+            // then
+            assertThatNoException().isThrownBy(() -> processor.process(emptyMsg));
         }
     }
-
-    private static boolean isOdd(int number) {
-        return number % 2 == 1;
-    }
-
-    private static boolean isEven(int number) {
-        return number % 2 == 0;
-    }
-
-    private record ExceptionLog(int second, boolean exceptionWasThrown) {}
 }
