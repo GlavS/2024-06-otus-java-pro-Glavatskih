@@ -1,9 +1,8 @@
 package ru.otus.listener.homework;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.otus.listener.Listener;
@@ -30,9 +29,13 @@ public class HistoryListener implements Listener, HistoryReader {
     }
 
     private static Message deepCopy(Message msg) {
-        ObjectForMessage newOfm = new ObjectForMessage();
-        newOfm.setData(List.copyOf(msg.getField13().getData()));
-        return msg.toBuilder().field13(newOfm).build();
+        if(msg.getField13() == null) {
+            return msg;
+        } else {
+            ObjectForMessage newOfm = new ObjectForMessage();
+            newOfm.setData(List.copyOf(msg.getField13().getData()));
+            return msg.toBuilder().field13(newOfm).build();
+        }
     }
 
     private void printHistory() {

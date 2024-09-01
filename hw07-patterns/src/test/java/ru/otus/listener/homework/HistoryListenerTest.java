@@ -1,6 +1,6 @@
 package ru.otus.listener.homework;
 
-import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
+import static org.assertj.core.api.Assertions.*;
 
 import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
@@ -33,5 +33,14 @@ class HistoryListenerTest {
         var messageFromHistory = historyListener.findMessageById(id);
         assertThat(messageFromHistory).isPresent();
         assertThat(messageFromHistory.get().getField13().getData()).containsExactly(data);
+    }
+
+    @Test
+    void listenerShouldNotThrowNPEIfField13IsNull() {
+        var historyListener = new HistoryListener();
+
+        var id = 10L;
+        var message = new Message.Builder(id).build();
+        assertThatNoException().isThrownBy(() -> historyListener.onUpdated(message));
     }
 }
