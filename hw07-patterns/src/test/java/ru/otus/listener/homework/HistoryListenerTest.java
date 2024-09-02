@@ -1,6 +1,7 @@
 package ru.otus.listener.homework;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatNoException;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
