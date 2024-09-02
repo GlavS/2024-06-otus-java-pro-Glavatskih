@@ -31,7 +31,7 @@ public class HistoryListener implements Listener, HistoryReader {
 
     private static Message deepCopy(Message msg) {
         if (msg.getField13() == null) {
-            return msg;
+            return msg.toBuilder().build();
         } else {
             ObjectForMessage newOfm = new ObjectForMessage();
             newOfm.setData(List.copyOf(msg.getField13().getData()));
