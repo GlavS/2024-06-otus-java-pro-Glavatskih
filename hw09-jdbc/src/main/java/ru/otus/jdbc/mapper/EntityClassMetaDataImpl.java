@@ -46,7 +46,10 @@ public class EntityClassMetaDataImpl<T> implements EntityClassMetaData<T> {
 
     @Override
     public List<Field> getAllFields() {
-        return Arrays.asList(entityClass.getDeclaredFields());
+        Field[] declaredFields = entityClass.getDeclaredFields();
+        List<Field> result = new ArrayList<>();
+        Collections.addAll(result, declaredFields);
+        return result;
     }
 
     @Override

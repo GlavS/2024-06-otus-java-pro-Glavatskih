@@ -9,7 +9,8 @@ public class EntitySQLMetaDataImpl<T> implements EntitySQLMetaData {
     private final String tableName;
     private final String idColumnName;
 
-    private static final String SELECT_FROM = "select * from ";
+    private static final String SELECT = "select ";
+    private static final String FROM = " from ";
     private static final String INSERT_INTO = "insert into ";
     private static final String UPDATE = "update ";
     private static final String SET = " set ";
@@ -29,12 +30,14 @@ public class EntitySQLMetaDataImpl<T> implements EntitySQLMetaData {
 
     @Override
     public String getSelectAllSql() {
-        return SELECT_FROM + tableName;
+        String names = createNames();
+        return SELECT + names + FROM + tableName;
     }
 
     @Override
     public String getSelectByIdSql() {
-        return SELECT_FROM + tableName + WHERE + idColumnName + EQUALS_PARAM;
+        String names = createNames();
+        return SELECT + names + FROM + tableName + WHERE + idColumnName + EQUALS_PARAM;
     }
 
     @Override
@@ -73,5 +76,13 @@ public class EntitySQLMetaDataImpl<T> implements EntitySQLMetaData {
         }
         // update table_name set name1 = ?, name2 = ? where id = ?;
         return UPDATE + tableName + SET + names + WHERE + idColumnName + EQUALS_PARAM;
+    }
+
+    private String createNames() {
+        List<Field> allFields = entityClassMetaData.getAllFields();
+        StringBuilder names = new StringBuilder(allFields.getFirst().getName());
+        allFields.removeFirst();
+        allFields.forEach(field -> names.append(COMMA).append(field.getName()));
+        return names.toString();
     }
 }
