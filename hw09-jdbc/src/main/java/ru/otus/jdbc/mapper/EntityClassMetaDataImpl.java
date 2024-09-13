@@ -23,7 +23,7 @@ public class EntityClassMetaDataImpl<T> implements EntityClassMetaData<T> {
         try {
             return entityClass.getConstructor(parameterTypes);
         } catch (NoSuchMethodException e) {
-            throw new RuntimeException(e);
+            throw new EntityClassMetaDataException(e);
         }
     }
 
@@ -63,9 +63,9 @@ public class EntityClassMetaDataImpl<T> implements EntityClassMetaData<T> {
     private Constructor<?> getAllArgsConstructor() {
         Constructor<?>[] entityClassConstructors = entityClass.getConstructors();
         Arrays.sort(entityClassConstructors, Comparator.comparingInt(Constructor::getParameterCount));
-        Constructor<?> maxArgsConstructor =  entityClassConstructors[entityClassConstructors.length - 1];
+        Constructor<?> maxArgsConstructor = entityClassConstructors[entityClassConstructors.length - 1];
         if (maxArgsConstructor.getParameterCount() < getAllFields().size()) {
-            throw new RuntimeException("No all-args constructor in entity class");
+            throw new EntityClassMetaDataException("No all-args constructor in entity class");
         }
         return maxArgsConstructor;
     }

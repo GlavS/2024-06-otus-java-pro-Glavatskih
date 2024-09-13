@@ -13,7 +13,6 @@ import ru.otus.crm.service.DbServiceClientImpl;
 import ru.otus.crm.service.DbServiceManagerImpl;
 import ru.otus.jdbc.mapper.*;
 
-@SuppressWarnings({"java:S125", "java:S1481"})
 public class HomeWork {
     private static final String URL = "jdbc:postgresql://localhost:5430/demoDB";
     private static final String USER = "usr";

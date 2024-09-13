@@ -3,6 +3,7 @@ package ru.otus.jdbc.mapper;
 import java.lang.reflect.Field;
 import java.util.List;
 
+@SuppressWarnings({"java:S125"})
 public class EntitySQLMetaDataImpl<T> implements EntitySQLMetaData {
     private final EntityClassMetaData<T> entityClassMetaData;
     private final String tableName;
@@ -19,9 +20,6 @@ public class EntitySQLMetaDataImpl<T> implements EntitySQLMetaData {
     private static final String COMMA = ", ";
     private static final String OPEN_BRACKET = " ( ";
     private static final String CLOSE_BRACKET = " ) ";
-
-
-
 
     public EntitySQLMetaDataImpl(EntityClassMetaData<T> entityClassMetaData) {
         this.entityClassMetaData = entityClassMetaData;
@@ -53,7 +51,15 @@ public class EntitySQLMetaDataImpl<T> implements EntitySQLMetaData {
             params.append(COMMA).append(PARAM);
         }
         // "insert into table_name (name1, name2) values ( ?, ? );"
-        return INSERT_INTO + tableName + OPEN_BRACKET + names + CLOSE_BRACKET +  VALUES + OPEN_BRACKET + params + CLOSE_BRACKET;
+        return INSERT_INTO
+                + tableName
+                + OPEN_BRACKET
+                + names
+                + CLOSE_BRACKET
+                + VALUES
+                + OPEN_BRACKET
+                + params
+                + CLOSE_BRACKET;
     }
 
     @Override
