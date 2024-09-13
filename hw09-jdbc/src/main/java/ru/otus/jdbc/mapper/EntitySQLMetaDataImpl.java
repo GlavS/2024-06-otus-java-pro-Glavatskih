@@ -8,6 +8,21 @@ public class EntitySQLMetaDataImpl<T> implements EntitySQLMetaData {
     private final String tableName;
     private final String idColumnName;
 
+    private static final String SELECT_FROM = "select * from ";
+    private static final String INSERT_INTO = "insert into ";
+    private static final String UPDATE = "update ";
+    private static final String SET = " set ";
+    private static final String VALUES = " values ";
+    private static final String WHERE = " where ";
+    private static final String PARAM = "?";
+    private static final String EQUALS_PARAM = " = ? ";
+    private static final String COMMA = ", ";
+    private static final String OPEN_BRACKET = " ( ";
+    private static final String CLOSE_BRACKET = " ) ";
+
+
+
+
     public EntitySQLMetaDataImpl(EntityClassMetaData<T> entityClassMetaData) {
         this.entityClassMetaData = entityClassMetaData;
         tableName = entityClassMetaData.getName();
@@ -16,12 +31,12 @@ public class EntitySQLMetaDataImpl<T> implements EntitySQLMetaData {
 
     @Override
     public String getSelectAllSql() {
-        return "select * from " + tableName;
+        return SELECT_FROM + tableName;
     }
 
     @Override
     public String getSelectByIdSql() {
-        return "select * from " + tableName + " where " + idColumnName + " = ?";
+        return SELECT_FROM + tableName + WHERE + idColumnName + EQUALS_PARAM;
     }
 
     @Override
@@ -31,26 +46,26 @@ public class EntitySQLMetaDataImpl<T> implements EntitySQLMetaData {
         StringBuilder names = new StringBuilder(fieldsWithoutId.getFirst().getName());
         fieldsWithoutId.removeFirst();
         for (Field field : fieldsWithoutId) {
-            names.append(", ").append(field.getName());
+            names.append(COMMA).append(field.getName());
         }
-        StringBuilder params = new StringBuilder("?");
+        StringBuilder params = new StringBuilder(PARAM);
         for (int i = 1; i < paramCount; i++) {
-            params.append(", ").append("?");
+            params.append(COMMA).append(PARAM);
         }
-        // "insert into client (name) values ( ? );"
-        return "insert into " + tableName + " (" + names + ") values (" + params + ")";
+        // "insert into table_name (name1, name2) values ( ?, ? );"
+        return INSERT_INTO + tableName + OPEN_BRACKET + names + CLOSE_BRACKET +  VALUES + OPEN_BRACKET + params + CLOSE_BRACKET;
     }
 
     @Override
     public String getUpdateSql() {
         List<Field> fieldsWithoutId = entityClassMetaData.getFieldsWithoutId();
         StringBuilder names = new StringBuilder(fieldsWithoutId.getFirst().getName());
-        names.append(" = ?");
+        names.append(EQUALS_PARAM);
         fieldsWithoutId.removeFirst();
         for (Field field : fieldsWithoutId) {
-            names.append(", ").append(field.getName()).append(" = ?");
+            names.append(COMMA).append(field.getName()).append(EQUALS_PARAM);
         }
-        // update client set name = ? where id = ?;
-        return "update " + tableName + " set " + names + "where " + idColumnName + " = ?";
+        // update table_name set name1 = ?, name2 = ? where id = ?;
+        return UPDATE + tableName + SET + names + WHERE + idColumnName + EQUALS_PARAM;
     }
 }
