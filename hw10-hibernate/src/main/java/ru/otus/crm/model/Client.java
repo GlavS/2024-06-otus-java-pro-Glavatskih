@@ -1,6 +1,7 @@
 package ru.otus.crm.model;
 
 import jakarta.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -53,9 +54,33 @@ public final class Client implements Cloneable {
     }
 
     @Override
-    @SuppressWarnings({"java:S2975", "java:S1182"})
+    @SuppressWarnings({"java:S2975"})
     public Client clone() {
-        return new Client(this.id, this.name, this.address, this.phones);
+        final Client clonedClient;
+        try {
+            clonedClient = (Client) super.clone();
+            clonedClient.setId(id);
+            clonedClient.setName(name);
+
+            List<Phone> clonedPhones = new ArrayList<>();
+            if (phones != null) {
+                phones.forEach(phone -> {
+                    Phone clonedPhone = phone.clone();
+                    clonedPhone.setClient(clonedClient);
+                    clonedPhones.add(clonedPhone);
+                    clonedClient.setPhones(clonedPhones);
+                });
+            }
+
+            if (address != null) {
+                Address clonedAddress = address.clone();
+                clonedAddress.setClient(clonedClient);
+                clonedClient.setAddress(clonedAddress);
+            }
+        } catch (CloneNotSupportedException e) {
+            throw new UnsupportedOperationException(e);
+        }
+        return clonedClient;
     }
 
     @Override
