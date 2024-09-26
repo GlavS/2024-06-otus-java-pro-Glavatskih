@@ -68,8 +68,8 @@ public final class Client implements Cloneable {
                     Phone clonedPhone = phone.clone();
                     clonedPhone.setClient(clonedClient);
                     clonedPhones.add(clonedPhone);
-                    clonedClient.setPhones(clonedPhones);
                 });
+                    clonedClient.setPhones(clonedPhones);
             }
 
             if (address != null) {
