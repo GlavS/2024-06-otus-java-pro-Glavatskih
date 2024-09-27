@@ -43,14 +43,22 @@ public final class Client implements Cloneable {
     public Client(Long id, String name, Address address, List<Phone> phones) {
         this.id = id;
         this.name = name;
-        this.address = address;
-        this.phones = phones;
+        this.address = null;
+        this.phones = null;
 
-        if (this.address != null) {
-            this.address.setClient(this);
+        if (address != null) {
+            Address addressCopy = new Address(address.getId(), address.getStreet());
+            addressCopy.setClient(this);
+            this.address = addressCopy;
         }
-        if (this.phones != null) {
-            this.phones.forEach(phone -> phone.setClient(this));
+        if (phones != null) {
+            List<Phone> phonesCopy = new ArrayList<>();
+            phones.forEach(phone -> {
+                Phone phoneCopy = new Phone(phone.getId(), phone.getNumber());
+                phoneCopy.setClient(this);
+                phonesCopy.add(phoneCopy);
+            });
+            this.phones = phonesCopy;
         }
     }
 
