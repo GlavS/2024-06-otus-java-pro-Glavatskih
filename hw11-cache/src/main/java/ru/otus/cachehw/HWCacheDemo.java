@@ -25,6 +25,8 @@ public class HWCacheDemo {
         cache.addListener(listener);
         cache.put("1", 1);
 
+       logger.info("empty value: {}" ,cache.get("2"));
+
         logger.info("getValue:{}", cache.get("1"));
         cache.remove("1");
         cache.removeListener(listener);
