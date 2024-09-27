@@ -1,7 +1,5 @@
 package ru.otus.base;
 
-import static ru.otus.demo.DbServiceDemo.HIBERNATE_CFG_FILE;
-
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.stat.EntityStatistics;
@@ -18,6 +16,8 @@ import ru.otus.crm.model.Client;
 import ru.otus.crm.model.Phone;
 import ru.otus.crm.service.DBServiceClient;
 import ru.otus.crm.service.DbServiceClientImpl;
+
+import static ru.otus.demo.DbServiceDemo.HIBERNATE_CFG_FILE;
 
 public abstract class AbstractHibernateTest {
     private static TestContainersConfig.CustomPostgreSQLContainer CONTAINER;

@@ -8,6 +8,7 @@ dependencies {
     runtimeOnly("org.flywaydb:flyway-database-postgresql")
 
     implementation("org.postgresql:postgresql")
+    testImplementation("com.h2database:h2")
 
     testImplementation("org.junit.jupiter:junit-jupiter-engine")
     testImplementation("org.junit.jupiter:junit-jupiter-params")
