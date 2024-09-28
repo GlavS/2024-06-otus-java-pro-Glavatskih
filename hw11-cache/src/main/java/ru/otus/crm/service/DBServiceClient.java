@@ -1,15 +1,8 @@
 package ru.otus.crm.service;
 
+import java.util.List;
 import ru.otus.crm.model.Client;
 
-import java.util.List;
-import java.util.Optional;
-
-public interface DBServiceClient {
-
-    Client saveClient(Client client);
-
-    Optional<Client> getClient(long id);
-
+public interface DBServiceClient extends DbServiceClientCached {
     List<Client> findAll();
 }

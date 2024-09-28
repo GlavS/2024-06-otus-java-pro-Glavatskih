@@ -7,8 +7,8 @@ import java.util.WeakHashMap;
 
 public class MyCache<K, V> implements HwCache<K, V> {
 
-    Map<K, V> cache = new WeakHashMap<>();
-    List<HwListener<K, V>> listeners = new ArrayList<>();
+    private final Map<K, V> cache = new WeakHashMap<>();
+    private final List<HwListener<K, V>> listeners = new ArrayList<>();
 
     @Override
     public void put(K key, V value) {
@@ -27,7 +27,6 @@ public class MyCache<K, V> implements HwCache<K, V> {
             listener.notify(key, cache.get(key), "REMOVE");
         }
         cache.remove(key);
-
     }
 
     @Override

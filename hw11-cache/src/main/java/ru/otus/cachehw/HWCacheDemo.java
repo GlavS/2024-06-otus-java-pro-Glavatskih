@@ -1,16 +1,18 @@
 package ru.otus.cachehw;
 
+import java.util.concurrent.TimeUnit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@SuppressWarnings("java:S125")
 public class HWCacheDemo {
     private static final Logger logger = LoggerFactory.getLogger(HWCacheDemo.class);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         new HWCacheDemo().demo();
     }
 
-    private void demo() {
+    private void demo() throws InterruptedException {
         HwCache<String, Integer> cache = new MyCache<>();
 
         // пример, когда Idea предлагает упростить код, при этом может появиться "спец"-эффект
@@ -23,12 +25,16 @@ public class HWCacheDemo {
         };
 
         cache.addListener(listener);
-        cache.put("1", 1);
+        for (int i = 0; i < 10; i++) {
 
-       logger.info("empty value: {}" ,cache.get("2"));
+            cache.put("key" + i, i);
+        }
 
-        logger.info("getValue:{}", cache.get("1"));
-        cache.remove("1");
+        // System.gc();
+        TimeUnit.SECONDS.sleep(1);
+        logger.info("key2:{}", cache.get("key2"));
+        cache.remove("key2");
+        logger.info("key2: {}", cache.get("key2"));
         cache.removeListener(listener);
     }
 }
