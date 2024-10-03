@@ -1,4 +1,4 @@
-rootProject.name = "otusJavaPro"
+rootProject.name = "GlavS-OtusJavaPro"
 include("hw01-gradle")
 include("hw02-generics")
 include("hw03-annotations")
@@ -10,6 +10,7 @@ include("hw08-io")
 include("hw09-jdbc")
 include("hw10-hibernate")
 include("hw11-cache")
+include("hw12-web-server")
 
 pluginManagement {
     val jgitver: String by settings
