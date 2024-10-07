@@ -10,6 +10,7 @@
 
   <logger name="org.hibernate" level="ERROR"/>
   <logger name="ch.qos.logback" level="ERROR"/>
+  <logger name="org.eclipse.jetty.server" level="ERROR"/>
 
   <root level="INFO">
     <appender-ref ref="STDOUT"/>
