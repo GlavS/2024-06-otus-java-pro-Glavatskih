@@ -22,11 +22,11 @@ import ru.otus.server.core.WebServer;
 import ru.otus.server.core.WebServerImpl;
 import ru.otus.server.security.UserAuthenticationService;
 import ru.otus.server.security.UserAuthenticationServiceImpl;
-import ru.otus.server.template.FreeMarkerProcessor;
-import ru.otus.server.template.TemplateProcessor;
 import ru.otus.server.security.userservice.DBServiceUser;
 import ru.otus.server.security.userservice.DBServiceUserImpl;
 import ru.otus.server.security.userservice.User;
+import ru.otus.server.template.FreeMarkerProcessor;
+import ru.otus.server.template.TemplateProcessor;
 
 public class Application {
     private static final Logger log = LoggerFactory.getLogger(Application.class);
