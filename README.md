@@ -13,3 +13,4 @@
 + **hw10-hibernate:** работа с Hibernate, разметка сущностей
 + **hw11-cache:** самодельный кэш сервиса
 + **hw12-web-server:** простой web-сервис с авторизацией, на основе Jetty
++ **hw13-IoC:** самодельный IoC container
