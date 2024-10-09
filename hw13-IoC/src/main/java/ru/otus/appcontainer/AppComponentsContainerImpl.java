@@ -1,12 +1,12 @@
 package ru.otus.appcontainer;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.*;
-import lombok.Builder;
-import lombok.SneakyThrows;
 import ru.otus.appcontainer.api.AppComponent;
 import ru.otus.appcontainer.api.AppComponentsContainer;
 import ru.otus.appcontainer.api.AppComponentsContainerConfig;
+import ru.otus.appcontainer.api.AppContainerException;
 
 @SuppressWarnings("squid:S1068")
 public class AppComponentsContainerImpl implements AppComponentsContainer {
@@ -18,40 +18,17 @@ public class AppComponentsContainerImpl implements AppComponentsContainer {
         processConfig(initialConfigClass);
     }
 
-    @SneakyThrows
-    private void processConfig(Class<?> configClass) {
-        checkConfigClass(configClass);
-        List<AppComponentDefinition> defs = processDefinitions(configClass);
-        for (AppComponentDefinition def : defs) {
-            Object component = createAppComponent(def, appComponents);
-            appComponents.add(component);
-            if (appComponentsByName.get(def.componentName) != null) {
-                throw new IllegalArgumentException("Duplicate component name: " + def.componentName);
-            } else {
-                appComponentsByName.put(def.componentName, component);
-            }
-        }
-    }
-
-    private void checkConfigClass(Class<?> configClass) {
-        if (!configClass.isAnnotationPresent(AppComponentsContainerConfig.class)) {
-            throw new IllegalArgumentException(String.format("Given class is not config %s", configClass.getName()));
-        }
-    }
-
     @Override
     public <C> C getAppComponent(Class<C> componentClass) {
-        long count = appComponents.stream().filter(componentClass::isInstance).count();
-        if (count > 1) {
-            throw new IllegalArgumentException(
+        List<Object> components =
+                appComponents.stream().filter(componentClass::isInstance).toList();
+        if (components.size() > 1) {
+            throw new AppContainerException(
                     String.format("Given component class %s is already registered", componentClass.getName()));
         }
-        Object component = appComponents.stream()
-                .filter(componentClass::isInstance)
-                .findFirst()
-                .orElse(null);
+        Object component = components.getFirst();
         if (component == null) {
-            throw new IllegalArgumentException(
+            throw new AppContainerException(
                     String.format("Given component class %s is not found", componentClass.getName()));
         } else {
             return componentClass.cast(component);
@@ -63,15 +40,42 @@ public class AppComponentsContainerImpl implements AppComponentsContainer {
     public <C> C getAppComponent(String componentName) {
         Object component = appComponentsByName.get(componentName);
         if (component == null) {
-            throw new IllegalArgumentException(String.format("Given component name %s is not found", componentName));
+            throw new AppContainerException(String.format("Given component name %s is not found", componentName));
         }
         return (C) component;
     }
 
-    @SneakyThrows
+    private void processConfig(Class<?> configClass) {
+        checkConfigClass(configClass);
+        List<AppComponentDefinition> defs = processDefinitions(configClass);
+        for (AppComponentDefinition def : defs) {
+            Object component = createAppComponent(def, appComponents);
+            appComponents.add(component);
+            if (appComponentsByName.get(def.getComponentName()) != null) {
+                throw new AppContainerException("Duplicate component name: " + def.getComponentName());
+            } else {
+                appComponentsByName.put(def.getComponentName(), component);
+            }
+        }
+    }
+
+    private void checkConfigClass(Class<?> configClass) {
+        if (!configClass.isAnnotationPresent(AppComponentsContainerConfig.class)) {
+            throw new AppContainerException(String.format("Given class is not config %s", configClass.getName()));
+        }
+    }
+
     private List<AppComponentDefinition> processDefinitions(Class<?> configClass) {
         List<AppComponentDefinition> defs = new ArrayList<>();
-        Object o = configClass.getConstructor().newInstance();
+        Object o;
+        try {
+            o = configClass.getConstructor().newInstance();
+        } catch (InstantiationException
+                | IllegalAccessException
+                | NoSuchMethodException
+                | InvocationTargetException e) {
+            throw new AppContainerException("Cannot instantiate application config" + configClass.getName(), e);
+        }
         for (Method method : configClass.getMethods()) {
             if (method.isAnnotationPresent(AppComponent.class)) {
                 AppComponentDefinition def = AppComponentDefinition.builder()
@@ -88,10 +92,9 @@ public class AppComponentsContainerImpl implements AppComponentsContainer {
         return defs;
     }
 
-    @SneakyThrows
     private Object createAppComponent(AppComponentDefinition def, List<Object> components) {
-        Method method = def.method;
-        Class<?>[] parameterTypes = def.parameterTypes;
+        Method method = def.getMethod();
+        Class<?>[] parameterTypes = def.getParameterTypes();
         Object[] args = new Object[parameterTypes.length];
         for (int i = 0; i < parameterTypes.length; i++) {
             for (Object component : components) {
@@ -100,20 +103,10 @@ public class AppComponentsContainerImpl implements AppComponentsContainer {
                 }
             }
         }
-        return method.invoke(def.configClass, args);
-    }
-
-    @Builder
-    private static class AppComponentDefinition implements Comparable<AppComponentDefinition> {
-        private final Object configClass;
-        private final String componentName;
-        private final Method method;
-        private final Class<?>[] parameterTypes;
-        private final int order;
-
-        @Override
-        public int compareTo(AppComponentDefinition o) {
-            return this.order - o.order;
+        try {
+            return method.invoke(def.getConfigClass(), args);
+        } catch (IllegalAccessException | InvocationTargetException e) {
+            throw new AppContainerException("Cannot create app component " + def.getComponentName(), e);
         }
     }
 }
