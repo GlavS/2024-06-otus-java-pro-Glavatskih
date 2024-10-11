@@ -1,11 +1,9 @@
 package ru.otus;
 
-import ru.otus.appcontainer.AppComponentsContainerImpl;
 import ru.otus.appcontainer.AppComponentsContainerMult;
 import ru.otus.appcontainer.api.AppComponentsContainer;
-import ru.otus.config.AppConfig;
-import ru.otus.config.SplittedConfigOne;
-import ru.otus.config.SplittedConfigTwo;
+import ru.otus.configsplit.SplittedConfigOne;
+import ru.otus.configsplit.SplittedConfigTwo;
 import ru.otus.services.GameProcessor;
 
 /*
@@ -27,10 +25,10 @@ public class App {
 
     public static void main(String[] args) {
         // Опциональные варианты
-         AppComponentsContainer container = new AppComponentsContainerMult(SplittedConfigOne.class, SplittedConfigTwo.class);
+        // AppComponentsContainer container = new AppComponentsContainerMult(SplittedConfigOne.class, SplittedConfigTwo.class);
 
         // Тут можно использовать библиотеку Reflections (см. зависимости)
-        // AppComponentsContainer container = new AppComponentsContainerImpl("ru.otus.config");
+         AppComponentsContainer container = new AppComponentsContainerMult("ru.otus.configsplit");
 
         // Обязательный вариант
 //        AppComponentsContainer container = new AppComponentsContainerImpl(AppConfig.class);

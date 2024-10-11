@@ -2,6 +2,7 @@ dependencies {
     //implementation("org.reflections:reflections")
     // https://mvnrepository.com/artifact/org.reflections/reflections
     implementation("org.reflections:reflections:0.10.2")
+    implementation("ch.qos.logback:logback-classic")
 
     compileOnly("org.projectlombok:lombok:1.18.34")
     annotationProcessor("org.projectlombok:lombok:1.18.34")
