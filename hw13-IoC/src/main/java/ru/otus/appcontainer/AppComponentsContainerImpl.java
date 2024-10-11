@@ -18,6 +18,8 @@ public class AppComponentsContainerImpl implements AppComponentsContainer {
         processConfig(initialConfigClass);
     }
 
+    protected AppComponentsContainerImpl(){}
+
     @Override
     public <C> C getAppComponent(Class<C> componentClass) {
         List<Object> components =
@@ -45,7 +47,7 @@ public class AppComponentsContainerImpl implements AppComponentsContainer {
         return (C) component;
     }
 
-    private void processConfig(Class<?> configClass) {
+    protected void processConfig(Class<?> configClass) {
         checkConfigClass(configClass);
         List<AppComponentDefinition> defs = processDefinitions(configClass);
         for (AppComponentDefinition def : defs) {
