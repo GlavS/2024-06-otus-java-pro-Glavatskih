@@ -13,10 +13,10 @@ public class SplittedConfigOne {
     public EquationPreparer equationPreparer() {
         return new EquationPreparerImpl();
     }
+
     @SuppressWarnings("squid:S106")
     @AppComponent(order = 1, name = "ioService")
     public IOService ioService() {
         return new IOServiceStreams(System.out, System.in);
     }
-
 }

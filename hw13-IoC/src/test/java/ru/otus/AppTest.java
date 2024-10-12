@@ -18,6 +18,7 @@ import ru.otus.appcontainer.api.AppComponentsContainerConfig;
 import ru.otus.config.AppConfig;
 import ru.otus.services.*;
 
+@SuppressWarnings("squid:S6204")
 class AppTest {
 
     @DisplayName("Из контекста тремя способами должен корректно доставаться компонент с проставленными полями")

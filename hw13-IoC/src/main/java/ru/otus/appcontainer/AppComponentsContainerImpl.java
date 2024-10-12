@@ -3,10 +3,7 @@ package ru.otus.appcontainer;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.*;
-import ru.otus.appcontainer.api.AppComponent;
-import ru.otus.appcontainer.api.AppComponentsContainer;
-import ru.otus.appcontainer.api.AppComponentsContainerConfig;
-import ru.otus.appcontainer.api.AppContainerException;
+import ru.otus.appcontainer.api.*;
 
 @SuppressWarnings("squid:S1068")
 public class AppComponentsContainerImpl implements AppComponentsContainer {
@@ -18,7 +15,7 @@ public class AppComponentsContainerImpl implements AppComponentsContainer {
         processConfig(initialConfigClass);
     }
 
-    protected AppComponentsContainerImpl(){}
+    protected AppComponentsContainerImpl() {}
 
     @Override
     public <C> C getAppComponent(Class<C> componentClass) {

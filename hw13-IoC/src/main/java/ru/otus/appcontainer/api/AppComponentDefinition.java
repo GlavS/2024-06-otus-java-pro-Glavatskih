@@ -1,11 +1,13 @@
-package ru.otus.appcontainer;
+package ru.otus.appcontainer.api;
 
 import java.lang.reflect.Method;
 import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 @Builder
 @Getter
+@EqualsAndHashCode
 public class AppComponentDefinition implements Comparable<AppComponentDefinition> {
 
     private final Object configClass;
