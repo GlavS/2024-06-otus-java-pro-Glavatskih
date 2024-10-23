@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: hw14-springdata-jdbc
+  datasource:
+    url: jdbc:postgresql://localhost:5430/demoDB
+    driver-class-name: org.postgresql.Driver
+    username: usr
+    password: pwd
+  data:
+    jdbc:
+      dialect: postgresql
