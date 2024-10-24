@@ -1,4 +1,3 @@
 package ru.otus.hw14springdatajdbc.model;
 
-public class Phone {
-}
+public class Phone {}
