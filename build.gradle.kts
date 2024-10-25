@@ -145,6 +145,7 @@ subprojects {
     tasks.withType<Test> {
         useJUnitPlatform()
         testLogging.showExceptions = true
+        jvmArgs("-XX:+EnableDynamicAgentLoading")
         reports {
             junitXml.required.set(true)
             html.required.set(true)

@@ -3,7 +3,6 @@ insert into public.client (id,"name") values
                                           (2,'Петя'),
                                           (3,'Владимир'),
                                           (4,'Елена');
-select setval('"client_seq"', 4);
 
 insert into public.address (street,client_id) values
                                                   ('Тверская 4',1),

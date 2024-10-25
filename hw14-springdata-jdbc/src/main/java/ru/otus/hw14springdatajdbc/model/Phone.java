@@ -1,3 +1,5 @@
 package ru.otus.hw14springdatajdbc.model;
 
-public class Phone {}
+import org.springframework.data.annotation.Id;
+
+public record Phone(@Id Long id, String number) {}

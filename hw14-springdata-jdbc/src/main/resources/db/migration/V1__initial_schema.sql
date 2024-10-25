@@ -29,5 +29,3 @@ alter table if exists phone
     add constraint FKffme64d5dkjig7ytqoif7yi9x
         foreign key (client_id)
             references client;
-
-create sequence client_SEQ start with 1 increment by 1;

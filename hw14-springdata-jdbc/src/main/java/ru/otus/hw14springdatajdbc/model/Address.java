@@ -1,3 +1,5 @@
 package ru.otus.hw14springdatajdbc.model;
 
-public class Address {}
+import org.springframework.data.annotation.Id;
+
+public record Address(@Id Long id, String street) {}
