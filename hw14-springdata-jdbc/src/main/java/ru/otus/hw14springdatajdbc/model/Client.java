@@ -1,7 +1,6 @@
 package ru.otus.hw14springdatajdbc.model;
 
 import java.util.Set;
-
 import lombok.Getter;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;

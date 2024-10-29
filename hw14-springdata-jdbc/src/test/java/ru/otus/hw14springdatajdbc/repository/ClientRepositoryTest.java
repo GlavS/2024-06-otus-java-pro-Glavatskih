@@ -1,24 +1,19 @@
 package ru.otus.hw14springdatajdbc.repository;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import java.util.Set;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
-import org.springframework.test.context.DynamicPropertyRegistry;
-import org.springframework.test.context.DynamicPropertySource;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import ru.otus.hw14springdatajdbc.model.Address;
 import ru.otus.hw14springdatajdbc.model.Client;
 import ru.otus.hw14springdatajdbc.model.Phone;
-
-import java.util.Set;
-
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @Testcontainers
 @DataJdbcTest
@@ -28,8 +23,6 @@ class ClientRepositoryTest {
     @Container
     @ServiceConnection
     private static final PostgreSQLContainer<?> container = new PostgreSQLContainer<>("postgres:12");
-
-
 
     @Autowired
     private ClientRepository clientRepository;
