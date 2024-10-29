@@ -39,10 +39,10 @@ public class ClientController {
     }
 
     @GetMapping("/edit")
-    public String editClientForm(Long id, Model model) {
-        Client clientToEdit = clientService.findById(id);
+    public String editClientForm(Long clientId, Model model) {
+        Client clientToEdit = clientService.findById(clientId);
         if (clientToEdit == null) {
-            throw new ClientProcessingException("Client with id " + id + " not found");
+            throw new ClientProcessingException("Client with id " + clientId + " not found");
         }
         model.addAttribute("client", clientToEdit);
         return "edit";
