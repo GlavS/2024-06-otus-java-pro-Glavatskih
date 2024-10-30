@@ -13,14 +13,22 @@
     <h2>Add new client</h2>
 
     <form method="post" action="/add">
-        <label>Client name <br/> <input type="text" name="clientName" placeholder="name"/></label> <br/> <br/>
+        <label>Client name <br/> <input type="text" id="clientName" name="clientName" placeholder="name"/></label> <br/> <br/>
         <label>Client address <br/> <input type="text" name="clientAddress" placeholder="address"/></label><br/><br/>
         <label>Client phone <br/> <input type="text" name="clientPhone" placeholder="phone"/></label><br/>
         <br/>
-        <input type="submit"/>
+        <input id="submit-btn" type="submit"/>
     </form>
 </div>
 
+<script>
+    $('#submit-btn').click(function () {
+        if ($('#clientName').val() === '') {
+            alert('Please enter the client name');
+            return false;
+        }
+    });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

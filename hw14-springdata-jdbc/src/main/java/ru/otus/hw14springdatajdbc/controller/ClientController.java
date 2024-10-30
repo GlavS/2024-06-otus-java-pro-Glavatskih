@@ -34,6 +34,9 @@ public class ClientController {
 
     @PostMapping("/add")
     public String addClientAction(ClientAddDto clientAddDto) {
+        if (clientAddDto.clientName() == null || clientAddDto.clientName().isEmpty()) {
+            return REDIRECT_ALL;
+        }
         clientService.addClient(clientAddDto);
         return REDIRECT_ALL;
     }

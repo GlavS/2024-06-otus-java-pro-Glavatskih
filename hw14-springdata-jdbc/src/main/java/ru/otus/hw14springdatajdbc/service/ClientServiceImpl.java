@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.otus.hw14springdatajdbc.exception.ClientProcessingException;
 import ru.otus.hw14springdatajdbc.model.Address;
@@ -12,7 +12,7 @@ import ru.otus.hw14springdatajdbc.model.Client;
 import ru.otus.hw14springdatajdbc.model.Phone;
 import ru.otus.hw14springdatajdbc.repository.ClientRepository;
 
-@Component
+@Service
 public class ClientServiceImpl implements ClientService {
     private final ClientRepository clientRepository;
 

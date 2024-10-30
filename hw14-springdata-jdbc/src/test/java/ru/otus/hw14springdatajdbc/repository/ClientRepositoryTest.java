@@ -1,6 +1,6 @@
 package ru.otus.hw14springdatajdbc.repository;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.assertj.core.api.Assertions.*;
 
 import java.util.Set;
 import org.junit.jupiter.api.Test;
@@ -30,13 +30,13 @@ class ClientRepositoryTest {
     @Test
     void findById() {
         var client = clientRepository.findById(1L);
-        assertNotNull(client);
+        assertThat(client).isNotNull();
     }
 
     @Test
     void findAll() {
         var client = clientRepository.findAll();
-        assertNotNull(client);
+        assertThat(client).isNotNull();
     }
 
     @Test
@@ -44,7 +44,7 @@ class ClientRepositoryTest {
         var client = new Client(
                 5L, "Carl", new Address(null, "Fridrichstrasse 2"), Set.of(new Phone(null, "222222222")), true);
         clientRepository.save(client);
-        assertNotNull(clientRepository.findById(5L));
+        assertThat(clientRepository.findById(5L)).isNotNull();
     }
 
     @Test
@@ -55,6 +55,14 @@ class ClientRepositoryTest {
         client = new Client(
                 6L, "Carl", new Address(null, "Leninstrasse 30"), Set.of(new Phone(null, "44444444")), false);
         clientRepository.save(client);
-        assertNotNull(clientRepository.findById(5L));
+        assertThat(clientRepository.findById(5L)).isNotNull();
+    }
+
+    @Test
+    void maxId() {
+        var client = new Client(
+                6L, "Carl", new Address(null, "Fridrichstrasse 2"), Set.of(new Phone(null, "222222222")), true);
+        clientRepository.save(client);
+        assertThat(clientRepository.getMaxId()).isEqualTo(6L);
     }
 }
