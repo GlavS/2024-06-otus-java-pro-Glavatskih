@@ -15,7 +15,7 @@ dependencies {
     implementation("org.webjars:jquery")
 
     // https://mvnrepository.com/artifact/org.webjars/webjars-locator
-    implementation("org.webjars:webjars-locator:0.52")
+    implementation("org.webjars:webjars-locator")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.testcontainers:junit-jupiter")

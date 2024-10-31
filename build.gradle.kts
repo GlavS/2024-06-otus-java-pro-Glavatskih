@@ -43,6 +43,7 @@ allprojects {
     val freemarker: String by project
 
     val reflections: String by project
+    val webjarsLocator: String by project
     val sockjs: String by project
     val stomp: String by project
     val bootstrap: String by project
@@ -76,6 +77,7 @@ allprojects {
             dependency("org.freemarker:freemarker:$freemarker")
             dependency("org.reflections:reflections:$reflections")
 
+            dependency("org.webjars:webjars-locator:$webjarsLocator")
             dependency("org.webjars:sockjs-client:$sockjs")
             dependency("org.webjars:stomp-websocket:$stomp")
             dependency("org.webjars:bootstrap:$bootstrap")
