@@ -9,6 +9,14 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     runtimeOnly("org.flywaydb:flyway-core")
     runtimeOnly("org.postgresql:postgresql")
+
+    implementation("org.webjars:bootstrap")
+    // https://mvnrepository.com/artifact/org.webjars/jquery
+    implementation("org.webjars:jquery")
+
+    // https://mvnrepository.com/artifact/org.webjars/webjars-locator
+    implementation("org.webjars:webjars-locator:0.52")
+
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.testcontainers:junit-jupiter")
     testImplementation("org.springframework.boot:spring-boot-testcontainers")

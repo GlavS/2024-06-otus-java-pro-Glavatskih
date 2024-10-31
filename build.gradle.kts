@@ -46,6 +46,7 @@ allprojects {
     val sockjs: String by project
     val stomp: String by project
     val bootstrap: String by project
+    val jquery: String by project
     val springDocOpenapiUi: String by project
 
     apply(plugin = "io.spring.dependency-management")
@@ -78,6 +79,7 @@ allprojects {
             dependency("org.webjars:sockjs-client:$sockjs")
             dependency("org.webjars:stomp-websocket:$stomp")
             dependency("org.webjars:bootstrap:$bootstrap")
+            dependency("org.webjars:jquery:$jquery")
             dependency("org.springdoc:springdoc-openapi-starter-webmvc-ui:$springDocOpenapiUi")
 
 
@@ -101,6 +103,7 @@ allprojects {
             force("commons-io:commons-io:2.15.1")
             force("com.google.errorprone:error_prone_annotations:2.26.1")
             force("com.google.j2objc:j2objc-annotations:3.0.0")
+            force("org.apache.commons:commons-text:1.11.0")
         }
     }
 }
