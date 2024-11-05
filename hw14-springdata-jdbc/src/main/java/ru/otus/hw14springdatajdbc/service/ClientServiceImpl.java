@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
+
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.otus.hw14springdatajdbc.exception.ClientProcessingException;
@@ -22,11 +24,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public List<Client> findAll() {
-        Iterable<Client> iterable = clientRepository.findAll();
-        List<Client> result = new ArrayList<>();
-        iterable.forEach(result::add);
-        result.sort(Comparator.comparing(Client::getId));
-        return result;
+        return clientRepository.findAll(Sort.by(Sort.Direction.ASC, "id"));
     }
 
     @Override
@@ -37,7 +35,7 @@ public class ClientServiceImpl implements ClientService {
     @Override
     @Transactional
     public void addClient(ClientAddDto clientAddDto) {
-        Long newId = clientRepository.getMaxId() + 1;
+        Long newId = clientRepository.getId();
         Client newClient = new Client(
                 newId,
                 clientAddDto.clientName(),
