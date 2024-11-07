@@ -8,6 +8,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,7 +73,7 @@ class ClientControllerTest {
     void editClientForm() throws Exception {
         long clientId = 1L;
         Client client = new Client(1L, "John", new Address(2L, "Street1"), Set.of(new Phone(3L, "112233")), false);
-        when(clientService.findById(clientId)).thenReturn(client);
+        when(clientService.findById(clientId)).thenReturn(Optional.of(client));
         mockMvc.perform(get("/edit").param("clientId", String.valueOf(clientId)))
                 .andDo(print())
                 .andExpect(status().isOk())

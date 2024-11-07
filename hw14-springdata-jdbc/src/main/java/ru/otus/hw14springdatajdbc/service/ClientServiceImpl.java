@@ -1,9 +1,6 @@
 package ru.otus.hw14springdatajdbc.service;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -28,8 +25,8 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public Client findById(long id) {
-        return clientRepository.findById(id).orElse(null);
+    public Optional<Client> findById(long id) {
+        return clientRepository.findById(id);
     }
 
     @Override

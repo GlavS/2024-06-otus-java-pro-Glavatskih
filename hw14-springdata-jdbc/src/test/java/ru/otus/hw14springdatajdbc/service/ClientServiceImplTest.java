@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.data.domain.Sort;
 import ru.otus.hw14springdatajdbc.model.Address;
 import ru.otus.hw14springdatajdbc.model.Client;
 import ru.otus.hw14springdatajdbc.model.Phone;
@@ -31,13 +32,13 @@ class ClientServiceImplTest {
 
     @Test
     void shouldGetAllClientsCorrectly() {
-        when(clientRepository.findAll()).thenReturn(List.of(client1, client2));
+        when(clientRepository.findAll(Sort.by(Sort.Direction.ASC, "id"))).thenReturn(List.of(client1, client2));
         assertThat(clientService.findAll()).containsExactly(client1, client2);
     }
 
     @Test
-    void shouldGetClientById() {
+    void shouldGetOptionalOfClientById() {
         when(clientRepository.findById(1L)).thenReturn(Optional.of(client1));
-        assertThat(clientService.findById(1)).usingRecursiveComparison().isEqualTo(client1);
+        assertThat(clientService.findById(1)).usingRecursiveComparison().isEqualTo(Optional.of(client1));
     }
 }
