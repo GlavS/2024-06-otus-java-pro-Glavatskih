@@ -61,7 +61,11 @@ class ClientRepositoryTest {
     @Test
     void maxId() {
         var client = new Client(
-                clientRepository.getId(), "Carl", new Address(null, "Fridrichstrasse 2"), Set.of(new Phone(null, "222222222")), true);
+                clientRepository.getId(),
+                "Carl",
+                new Address(null, "Fridrichstrasse 2"),
+                Set.of(new Phone(null, "222222222")),
+                true);
         clientRepository.save(client);
         assertThat(clientRepository.getId()).isEqualTo(6L);
     }
