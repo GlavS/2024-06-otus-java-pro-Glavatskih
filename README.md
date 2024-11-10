@@ -15,3 +15,4 @@
 + **hw12-web-server:** простой web-сервис с авторизацией, на основе Jetty
 + **hw13-IoC:** самодельный IoC container
 + **hw14-springdata-jdbc:** web-приложение на основе Spring Data JDBC
++ **hw15-synchronized:** основы синхронизации потоков

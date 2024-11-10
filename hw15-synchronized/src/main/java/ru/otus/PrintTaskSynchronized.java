@@ -1,15 +1,15 @@
 package ru.otus;
 
-import ru.otus.util.CyclicIterator;
-
 import static ru.otus.util.SleepUtil.sleep;
+
+import ru.otus.util.CyclicIterator;
 
 public class PrintTaskSynchronized implements Runnable {
     private String lastWorkingThreadName = "Thread 2";
 
     @Override
     public synchronized void run() {
-    CyclicIterator iterator = new CyclicIterator();
+        CyclicIterator iterator = new CyclicIterator();
         while (!Thread.currentThread().isInterrupted()) {
             try {
                 while (lastWorkingThreadName.equals(Thread.currentThread().getName())) {

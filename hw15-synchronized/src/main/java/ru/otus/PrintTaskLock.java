@@ -1,12 +1,11 @@
 package ru.otus;
 
-import ru.otus.util.CyclicIterator;
+import static ru.otus.util.SleepUtil.sleep;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
-import static ru.otus.util.SleepUtil.sleep;
+import ru.otus.util.CyclicIterator;
 
 public class PrintTaskLock implements Runnable {
     private final Lock lock = new ReentrantLock();
@@ -15,7 +14,7 @@ public class PrintTaskLock implements Runnable {
 
     @Override
     public void run() {
-    CyclicIterator iterator = new CyclicIterator();
+        CyclicIterator iterator = new CyclicIterator();
         lock.lock();
         try {
             while (!Thread.currentThread().isInterrupted()) {
