@@ -6,8 +6,6 @@ public class CyclicIterator {
     private final AtomicInteger count = new AtomicInteger(0);
     private boolean ascending = true;
 
-    public CyclicIterator() {}
-
     public int next() {
         int result;
         if (ascending) {
@@ -22,12 +20,5 @@ public class CyclicIterator {
             }
         }
         return result;
-    }
-
-    public static void main(String[] args) {
-        CyclicIterator iterator = new CyclicIterator();
-        for (int i = 0; i < 30; i++) {
-            System.out.println(iterator.next());
-        }
     }
 }

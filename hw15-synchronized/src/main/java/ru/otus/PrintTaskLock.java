@@ -5,9 +5,12 @@ import static ru.otus.util.SleepUtil.sleep;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.otus.util.CyclicIterator;
 
 public class PrintTaskLock implements Runnable {
+    private static final Logger logger = LoggerFactory.getLogger(PrintTaskLock.class);
     private final Lock lock = new ReentrantLock();
     private final Condition lastThread = lock.newCondition();
     private String lastWorkingThreadName = "Thread 2";
@@ -22,10 +25,7 @@ public class PrintTaskLock implements Runnable {
                     while (lastWorkingThreadName.equals(Thread.currentThread().getName())) {
                         lastThread.await();
                     }
-                    System.out.printf("[%s] - %d%n", Thread.currentThread().getName(), iterator.next());
-                    if (Thread.currentThread().getName().equals("Thread 2")) {
-                        System.out.println();
-                    }
+                    logger.info("[{}] - {}", Thread.currentThread().getName(), iterator.next());
                     lastWorkingThreadName = Thread.currentThread().getName();
                     sleep();
                     lastThread.signal();
