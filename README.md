@@ -16,3 +16,4 @@
 + **hw13-IoC:** самодельный IoC container
 + **hw14-springdata-jdbc:** web-приложение на основе Spring Data JDBC
 + **hw15-synchronized:** основы синхронизации потоков
++ **hw16-concurrent-collections:** система обработки сообщений на основе потокобезопасной очереди
