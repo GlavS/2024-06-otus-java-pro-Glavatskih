@@ -2,7 +2,6 @@ package ru.otus.services.processors;
 
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.PriorityBlockingQueue;
 import org.slf4j.Logger;
@@ -15,28 +14,28 @@ import ru.otus.lib.SensorDataBufferedWriter;
 public class SensorDataProcessorBuffered implements SensorDataProcessor {
     private static final Logger log = LoggerFactory.getLogger(SensorDataProcessorBuffered.class);
 
-    private final BlockingQueue<SensorData> queue;
+    private final BlockingQueue<SensorData> buffer;
     private final int bufferSize;
     private final SensorDataBufferedWriter writer;
 
     public SensorDataProcessorBuffered(int bufferSize, SensorDataBufferedWriter writer) {
         this.bufferSize = bufferSize;
         this.writer = writer;
-        this.queue = new PriorityBlockingQueue<>(bufferSize, Comparator.comparing(SensorData::getMeasurementTime));
+        buffer = new PriorityBlockingQueue<>(bufferSize, Comparator.comparing(SensorData::getMeasurementTime));
     }
 
     @Override
     public void process(SensorData data) {
-        if (queue.size() >= bufferSize) {
+        if (buffer.size() >= bufferSize) {
             flush();
         }
-        queue.add(data);
+        buffer.add(data);
     }
 
     public void flush() {
-        List<SensorData> resultList = new ArrayList<>();
+        var resultList = new ArrayList<SensorData>();
         try {
-            queue.drainTo(resultList, bufferSize);
+            buffer.drainTo(resultList, bufferSize);
             if (!resultList.isEmpty()) {
                 writer.writeBufferedData(resultList);
             }
