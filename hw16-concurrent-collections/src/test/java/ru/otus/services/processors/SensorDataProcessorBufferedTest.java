@@ -10,9 +10,9 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -26,10 +26,12 @@ import ru.otus.api.model.SensorData;
 import ru.otus.lib.SensorDataBufferedWriter;
 
 @ExtendWith(MockitoExtension.class)
+@SuppressWarnings({"java:S1117", "java:S6204"})
 class SensorDataProcessorBufferedTest {
+    private static final Logger log = LoggerFactory.getLogger(SensorDataProcessorBufferedTest.class);
+
     public static final int BUFFER_SIZE = 2000;
     public static final String ANY_ROOM = "AnyRoom";
-    private static final Logger log = LoggerFactory.getLogger(SensorDataProcessorBufferedTest.class);
 
     @Mock
     private SensorDataBufferedWriter writer;
@@ -45,7 +47,7 @@ class SensorDataProcessorBufferedTest {
     }
 
     @Test
-    @Disabled("Удалить до начала тестирования")
+    //    @Disabled("Удалить до начала тестирования")
     void shouldExecFlushWhenBufferOverFlow() {
         List<SensorData> sensorDataList = getSensorDataForTest(BUFFER_SIZE + BUFFER_SIZE / 2);
 
@@ -61,7 +63,7 @@ class SensorDataProcessorBufferedTest {
     }
 
     @Test
-    @Disabled("Удалить до начала тестирования")
+    //    @Disabled("Удалить до начала тестирования")
     void shouldFlushBufferDataSortedByTime() {
         List<SensorData> sensorDataList = getSensorDataForTest(BUFFER_SIZE - 1);
         var originalSensorDataList = List.copyOf(sensorDataList);
@@ -79,7 +81,7 @@ class SensorDataProcessorBufferedTest {
     }
 
     @Test
-    @Disabled("Удалить до начала тестирования")
+    //    @Disabled("Удалить до начала тестирования")
     void shouldFlushTheRestOfTheBufferDataWhenOnProcessingEndFired() {
         List<SensorData> sensorDataList = getSensorDataForTest(BUFFER_SIZE + BUFFER_SIZE / 2);
         sensorDataList.forEach(sensorData -> processor.process(sensorData));
@@ -96,7 +98,7 @@ class SensorDataProcessorBufferedTest {
     }
 
     @RepeatedTest(100)
-    @Disabled("Удалить до начала тестирования")
+    //    @Disabled("Удалить до начала тестирования")
     void shouldCorrectFlushDataFromManyThreads() {
         List<SensorData> sensorDataList = getSensorDataForTest(BUFFER_SIZE - 1);
         sensorDataList.forEach(sensorData -> processor.process(sensorData));
@@ -125,14 +127,14 @@ class SensorDataProcessorBufferedTest {
     }
 
     @RepeatedTest(1_000)
-    @Disabled("Удалить до начала тестирования")
+    //    @Disabled("Удалить до начала тестирования")
     void shouldCorrectFlushDataAndWriteThreads() throws InterruptedException {
         List<SensorData> sensorDataList = getSensorDataForTest(BUFFER_SIZE - 1);
 
         var latchReady = new CountDownLatch(2);
         var processFlag = new AtomicBoolean(true);
 
-        var testWriter = new SensorDataBufferedWriter() {
+        var writer = new SensorDataBufferedWriter() {
             private final List<SensorData> data = new ArrayList<>();
 
             @Override
@@ -145,20 +147,20 @@ class SensorDataProcessorBufferedTest {
             }
         };
 
-        var testProcessor = new SensorDataProcessorBuffered(BUFFER_SIZE, testWriter);
+        var processor = new SensorDataProcessorBuffered(BUFFER_SIZE, writer);
         var writerThread = new Thread(() -> {
             latchReady.countDown();
             awaitLatch(latchReady);
-            sensorDataList.forEach(testProcessor::process);
+            sensorDataList.forEach(processor::process);
             processFlag.set(false);
         });
         var flusherThread = new Thread(() -> {
             latchReady.countDown();
             awaitLatch(latchReady);
             do {
-                testProcessor.flush();
+                processor.flush();
             } while (processFlag.get());
-            testProcessor.flush();
+            processor.flush();
         });
 
         writerThread.start();
@@ -167,8 +169,8 @@ class SensorDataProcessorBufferedTest {
         writerThread.join(100);
         flusherThread.join(100);
 
-        assertThat(testWriter.getData()).hasSize(sensorDataList.size());
-        assertThat(testWriter.getData()).isEqualTo(sensorDataList);
+        assertThat(writer.getData()).hasSize(sensorDataList.size());
+        assertThat(writer.getData()).isEqualTo(sensorDataList);
     }
 
     private List<SensorData> getSensorDataForTest(int limit) {
@@ -177,7 +179,7 @@ class SensorDataProcessorBufferedTest {
                 .limit(limit)
                 .boxed()
                 .map(d -> new SensorData(startTime.plusSeconds(d.longValue()), ANY_ROOM, d))
-                .toList();
+                .collect(Collectors.toList());
     }
 
     private void awaitLatch(CountDownLatch latch) {
