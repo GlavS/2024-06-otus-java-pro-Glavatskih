@@ -32,10 +32,10 @@ public class SensorDataProcessorBuffered implements SensorDataProcessor {
         buffer.add(data);
     }
 
-    public void flush() {
+    public synchronized void flush() {
         var resultList = new ArrayList<SensorData>();
         try {
-            buffer.drainTo(resultList, bufferSize);
+            buffer.drainTo(resultList);
             if (!resultList.isEmpty()) {
                 writer.writeBufferedData(resultList);
             }
