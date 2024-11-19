@@ -39,3 +39,4 @@ pluginManagement {
         id("io.freefair.lombok") version lombok
     }
 }
+include("hw17-grpc")

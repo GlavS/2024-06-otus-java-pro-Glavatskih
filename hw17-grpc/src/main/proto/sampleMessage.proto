@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package ru.otus;
+
+option java_multiple_files = true;
+
+message sampleMessage {
+  int64 id = 1;
+  string value = 2;
+  float number = 3;
+}
