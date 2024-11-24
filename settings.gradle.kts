@@ -15,6 +15,7 @@ include("hw13-IoC")
 include("hw14-springdata-jdbc")
 include("hw15-synchronized")
 include("hw16-concurrent-collections")
+include("hw17-grpc")
 
 pluginManagement {
     val jgitver: String by settings
@@ -39,4 +40,4 @@ pluginManagement {
         id("io.freefair.lombok") version lombok
     }
 }
-include("hw17-grpc")
+

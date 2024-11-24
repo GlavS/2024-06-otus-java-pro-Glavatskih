@@ -1,11 +1,10 @@
 package ru.otus.killboss.server;
 
 import io.grpc.stub.StreamObserver;
+import java.util.concurrent.TimeUnit;
 import ru.otus.killboss.KillBossServiceGrpc;
 import ru.otus.killboss.NumberResponse;
 import ru.otus.killboss.RangeRequest;
-
-import java.util.concurrent.TimeUnit;
 
 public class NumberService extends KillBossServiceGrpc.KillBossServiceImplBase {
 
@@ -13,14 +12,6 @@ public class NumberService extends KillBossServiceGrpc.KillBossServiceImplBase {
 
     public NumberService(long delay) {
         this.delay = delay;
-    }
-
-    private void makeDelay() {
-        try {
-            TimeUnit.MILLISECONDS.sleep(delay);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
     }
 
     @Override
@@ -32,5 +23,13 @@ public class NumberService extends KillBossServiceGrpc.KillBossServiceImplBase {
             makeDelay();
         }
         responseObserver.onCompleted();
+    }
+
+    private void makeDelay() {
+        try {
+            TimeUnit.MILLISECONDS.sleep(delay);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
     }
 }
