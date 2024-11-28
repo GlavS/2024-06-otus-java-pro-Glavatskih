@@ -27,7 +27,7 @@ public class ClientStreamObserver implements StreamObserver<NumberResponse> {
         logger.info("request completed");
     }
 
-    public int getCurrentValue() {
+    public synchronized int getCurrentValue() {
         return currentValue;
     }
 
