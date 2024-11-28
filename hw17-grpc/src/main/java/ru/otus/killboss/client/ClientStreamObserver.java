@@ -12,8 +12,11 @@ public class ClientStreamObserver implements StreamObserver<NumberResponse> {
 
     @Override
     public void onNext(NumberResponse numberResponse) {
-        currentValue = numberResponse.getValue();
-        logger.info("newValue:{}", currentValue);
+        synchronized (this) {
+            currentValue = numberResponse.getValue();
+            logger.info("newValue:{}", currentValue);
+        }
+
     }
 
     @Override
