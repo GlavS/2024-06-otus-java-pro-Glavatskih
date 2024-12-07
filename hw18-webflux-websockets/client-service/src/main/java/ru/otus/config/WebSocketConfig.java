@@ -22,4 +22,9 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
                 .setHandshakeHandler(new UsernameHandshakeHandler())
                 .withSockJS();
     }
+
+    //    @Override
+    //    public void configureClientInboundChannel(ChannelRegistration registration) {
+    //        registration.interceptors(new Room1408ChannelInterceptor());
+    //    }
 }

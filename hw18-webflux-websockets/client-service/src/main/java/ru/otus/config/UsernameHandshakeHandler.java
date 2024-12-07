@@ -11,7 +11,9 @@ import reactor.util.annotation.NonNull;
 public class UsernameHandshakeHandler extends DefaultHandshakeHandler {
     @Override
     protected Principal determineUser(
-            @NonNull ServerHttpRequest request, @NonNull WebSocketHandler wsHandler, @NonNull Map<String, Object> attributes) {
+            @NonNull ServerHttpRequest request,
+            @NonNull WebSocketHandler wsHandler,
+            @NonNull Map<String, Object> attributes) {
         return new WsPrincipal(UUID.randomUUID().toString());
     }
 }

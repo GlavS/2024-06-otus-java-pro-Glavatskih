@@ -40,6 +40,11 @@ public class MessageController {
                 String.format("%s%s", TOPIC_TEMPLATE, roomId), new Message(HtmlUtils.htmlEscape(message.messageStr())));
     }
 
+    @MessageMapping("/message.1408")
+    public void process1408(Message message) {
+        logger.info("process 1408 message, message is lost:{}", message);
+    }
+
     @EventListener
     public void handleSessionSubscribeEvent(SessionSubscribeEvent event) {
         var genericMessage = (GenericMessage<byte[]>) event.getMessage();
@@ -93,5 +98,9 @@ public class MessageController {
                         return response.createException().flatMapMany(Mono::error);
                     }
                 });
+    }
+
+    private Flux<Message> getAllMessages() {
+        return Flux.just();
     }
 }
