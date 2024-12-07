@@ -1,6 +1,11 @@
+plugins {
+    id("io.freefair.lombok")
+}
+
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation ("com.google.code.findbugs:jsr305")
+    implementation("ch.qos.logback:logback-classic")
 
     implementation("io.r2dbc:r2dbc-postgresql")
     implementation("org.postgresql:postgresql")
