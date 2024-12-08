@@ -87,7 +87,7 @@ public class MessageController {
     private Flux<Message> getMessagesByRoomId(long roomId) {
         return datastoreClient
                 .get()
-                .uri(String.format("/msg/%s", roomId))
+                .uri(calculateUri(roomId))
                 .accept(MediaType.APPLICATION_NDJSON)
                 .exchangeToFlux(response -> {
                     if (response.statusCode().equals(HttpStatus.OK)) {
@@ -98,7 +98,7 @@ public class MessageController {
                 });
     }
 
-    private Flux<Message> getAllMessages() {
-        return Flux.just();
+    private String calculateUri(long roomId) {
+        return roomId == 1408 ? "/msg/all" : String.format("/msg/%s", roomId);
     }
 }

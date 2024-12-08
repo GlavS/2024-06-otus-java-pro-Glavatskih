@@ -54,7 +54,8 @@ public class DataController {
 
     @GetMapping(value = "/msg/all", produces = MediaType.APPLICATION_NDJSON_VALUE)
     public Flux<MessageDto> getAllMessages() {
-        return dataStore.loadAllMessages()
+        return dataStore
+                .loadAllMessages()
                 .map(message -> new MessageDto(message.msgText()))
                 .doOnNext(dto -> log.info("message dto: {}", dto))
                 .subscribeOn(workerPool);
