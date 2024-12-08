@@ -1,0 +1,15 @@
+###
+POST http://localhost:8081/msg/1
+Accept: */*
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+  "messageStr": "third"
+}
+
+###
+GET http://localhost:8081/msg/1
+
+###
+GET http://localhost:8081/msg/all

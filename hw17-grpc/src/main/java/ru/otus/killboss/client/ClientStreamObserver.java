@@ -16,7 +16,6 @@ public class ClientStreamObserver implements StreamObserver<NumberResponse> {
             currentValue = numberResponse.getValue();
             logger.info("newValue:{}", currentValue);
         }
-
     }
 
     @Override

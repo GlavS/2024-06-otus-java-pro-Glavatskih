@@ -16,6 +16,8 @@ include("hw14-springdata-jdbc")
 include("hw15-synchronized")
 include("hw16-concurrent-collections")
 include("hw17-grpc")
+include("hw18-webflux-websockets:client-service")
+include("hw18-webflux-websockets:datastore-service")
 
 pluginManagement {
     val jgitver: String by settings
@@ -40,4 +42,3 @@ pluginManagement {
         id("io.freefair.lombok") version lombok
     }
 }
-
