@@ -18,3 +18,4 @@
 + **hw15-synchronized:** основы синхронизации потоков
 + **hw16-concurrent-collections:** система обработки сообщений на основе потокобезопасной очереди
 + **hw17-grpc:** коммуникация приложений с помощью gRPC
++ **hw18-webflux-websockets:** асинхронное full-stack приложение на основе WebFlux и websockets
